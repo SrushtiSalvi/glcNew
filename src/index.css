@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-lighter: 0 57 105;
+    /* #003969 */
+    --primary-light: 3 49 89;
+    /* #033159 */
+    --primary: 0 32 69;
+    /* #002045 */
+    --primary-dark: 3 27 54;
+    /* #031B36 */
+  }
+  .theme-default {
+    --primary-lighter: 0 57 105;
+    /* #003969 */
+    --primary-light: 3 49 89;
+    /* #033159 */
+    --primary: 2 42 77;
+    /* #022a4d */
+    --primary-dark: 1 27 48;
+    /* #011b30 */
+  }
+  .theme-teal {
+    --primary-lighter: 174 254 255;
+    /* #AEFEFF */
+    --primary-light: 79 189 186;
+    /* #4FBDBA */
+    --primary: 53 133 139;
+    /* #35858B */
+    --primary-dark: 7 34 39;
+    /* #072227 */
+  }
+  .theme-crimson {
+    --primary-lighter: 173 59 80;
+    /* #ad3b50 */
+    --primary-light: 179 30 58;
+    /* #b31e3a */
+    --primary: 232 7 48;
+    /* #e80730 */
+    --primary-dark: 122 20 38;
+    /* #7a1426 */
+  }
+}
