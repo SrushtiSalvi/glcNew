@@ -50,7 +50,6 @@ const Footer = () => {
             w-full
             mt-1
             rounded-sm
-            shadow-sm
             p-2
             text-sm
             bg-primary-light
@@ -67,7 +66,6 @@ const Footer = () => {
                 w-full
                 mt-1
                 rounded-sm
-                shadow-sm
                 p-2
                 text-sm
                 bg-primary-light
@@ -85,7 +83,6 @@ const Footer = () => {
                 w-full
                 mt-1
                 rounded-sm
-                shadow-sm
                 p-2
                 text-sm
                 bg-primary-light
@@ -102,7 +99,6 @@ const Footer = () => {
                 w-full
                 mt-1
                 rounded-sm
-                shadow-sm
                 p-2
                 text-sm
                 bg-primary-light
@@ -122,7 +118,8 @@ const Footer = () => {
             duration-150
             bg-[#EC595F]
             focus:shadow-outline
-            hover:bg-indigo-800
+            hover:bg-navText-blue
+            hover:text-black
           ">
                 Send
               </button>
