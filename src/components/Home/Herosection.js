@@ -7,7 +7,7 @@ import Options from './Options';
 
 const Herosection = () => {
   return (
-    <div className="bg-hero-section h-screen">
+    <div className="bg-hero-section bg-cover bg-no-repeat h-screen">
       <Navbar className="flex" />
       <div className="flex flex-row mt-24 ml-32">
         <Link to="/" className="cursor-pointer">
@@ -21,7 +21,7 @@ const Herosection = () => {
           </h1>
         </div>
       </div>
-      <div className=" mt-36">
+      <div className=" mt-48">
         <Options />
       </div>
     </div>

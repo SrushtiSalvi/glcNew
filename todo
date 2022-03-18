@@ -6,12 +6,12 @@ project setup: 1. repo
 routing setup:
 layout: 1. navbar
   2. footer
-pages: 1. landing page - srushti
+pages: 1. landing page - kaushal
   2. all posts -srushti
   3. single post -apurva
   4. about us -apurva
   5. recruiters -apurva
-  6. student section - kaushal
+  6. student section - srushti
   7. cv builder -kaushal
   8. flagship events -srushti
 admin:
