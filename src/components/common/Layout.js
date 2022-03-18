@@ -1,7 +1,7 @@
 import React from 'react';
-import Navbar from '../Navbar';
-import Footer from '../Footer';
 import { Outlet } from 'react-router-dom';
+import Navbar from '../Layout/Navbar';
+import Footer from '../Layout/Footer';
 
 const Layout = () => {
   return (
@@ -10,7 +10,7 @@ const Layout = () => {
       <div className="flex-grow">
         <Outlet />
       </div>
-      <Footer />
+      <Footer className="hidden" />
     </div>
   );
 };

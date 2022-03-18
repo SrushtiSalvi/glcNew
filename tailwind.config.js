@@ -13,6 +13,7 @@ module.exports = {
     extend: {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
+        'aref-ruqaa': ['Aref Ruqaa', 'serif'],
       },
       colors: {
         primary: {
@@ -24,6 +25,9 @@ module.exports = {
         navText: {
           blue: '#0BD5D9',
         },
+      },
+      backgroundImage: {
+        'hero-section': 'url(assets/Herosection_bg.svg)',
       },
     },
   },
