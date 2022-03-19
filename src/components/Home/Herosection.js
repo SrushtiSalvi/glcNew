@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-import logo from '../../assets/GLC_logo.png';
-import Navbar from './Navbar';
-import Options from './Options';
+import logo from "../../assets/GLC_logo.png";
+import Navbar from "./Navbar";
+import Options from "./Options";
 
 const Herosection = () => {
   return (

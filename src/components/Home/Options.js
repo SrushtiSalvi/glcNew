@@ -1,8 +1,8 @@
-import React from 'react';
-import { FaHandshake } from 'react-icons/fa';
-import { MdOutlineNoteAlt } from 'react-icons/md';
-import { BsCalendarEvent } from 'react-icons/bs';
-import { RiContactsFill } from 'react-icons/ri';
+import React from "react";
+import { FaHandshake } from "react-icons/fa";
+import { MdOutlineNoteAlt } from "react-icons/md";
+import { BsCalendarEvent } from "react-icons/bs";
+import { RiContactsFill } from "react-icons/ri";
 
 const Options = () => {
   return (

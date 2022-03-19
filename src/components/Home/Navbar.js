@@ -1,7 +1,7 @@
-import React from 'react';
-import { FaFacebookF, FaGooglePlus, FaLinkedinIn } from 'react-icons/fa';
-import { IoCallSharp } from 'react-icons/io5';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { FaFacebookF, FaGooglePlus, FaLinkedinIn } from "react-icons/fa";
+import { IoCallSharp } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (

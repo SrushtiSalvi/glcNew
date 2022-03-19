@@ -1,8 +1,8 @@
-import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-import AllPosts from './pages/AllPosts';
-import ContactUs from './pages/ContactUs';
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import AllPosts from "./pages/AllPosts";
+import ContactUs from "./pages/ContactUs";
 
 const App = () => {
   return (

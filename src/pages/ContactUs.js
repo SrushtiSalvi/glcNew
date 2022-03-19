@@ -1,6 +1,6 @@
-import React from 'react';
-import { FaMapMarkerAlt } from 'react-icons/fa';
-import { IoCall, IoMail } from 'react-icons/io5';
+import React from "react";
+import { FaMapMarkerAlt } from "react-icons/fa";
+import { IoCall, IoMail } from "react-icons/io5";
 
 const ContactUs = () => {
   return (
@@ -9,7 +9,8 @@ const ContactUs = () => {
         <iframe
           title="map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.9326102451205!2d72.82466571426073!3d18.934376787169303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1e6eea9f981%3A0xa6351cfd2932b52a!2sGovernment%20Law%20College%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1646650528533!5m2!1sen!2sin"
-          className="absolute w-screen h-screen -z-10"></iframe>
+          className="absolute w-screen h-screen -z-10"
+        ></iframe>
       </map>
       <div className="z-10 relative flex flex-col items-center w-3/5 mx-auto my-32">
         {/* className="absolute w-screen -z-10 hidden lg:block top-24" */}
@@ -97,7 +98,8 @@ const ContactUs = () => {
                 </div>
                 <button
                   class="flex-shrink-0 bg-primary-light hover:bg-primary-dark border-primary-light hover:border-primary-light text-md text-white py-2 px-5 rounded"
-                  type="button">
+                  type="button"
+                >
                   Send
                 </button>
               </form>

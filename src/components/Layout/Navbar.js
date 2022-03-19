@@ -1,10 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-import logo from '../../assets/GLC_logo.png';
-import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
-import { IoCallSharp } from 'react-icons/io5';
-import { FiMail } from 'react-icons/fi';
+import logo from "../../assets/GLC_logo.png";
+import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { IoCallSharp } from "react-icons/io5";
+import { FiMail } from "react-icons/fi";
 
 const Navbar = () => {
   return (

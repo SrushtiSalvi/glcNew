@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
 
 const PostCard = () => {
   return (
     <div
       className="m-5 px-6 md:pt-6 pt-3 rounded-lg shadow-md shadow-gray-400 bg-gradient-to-br from-primary-dark to-primary-lighter text-white"
       data-aos="fade-up"
-      data-aos-anchor-placement="top-bottom">
+      data-aos-anchor-placement="top-bottom"
+    >
       <section className="flex justify-between mb-3 md:mb-16">
         <p className="md:text-2xl text-xl font-poppins font-medium line-clamp-1">
           Mr. Karim Patel
