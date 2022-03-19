@@ -1,10 +1,10 @@
-import { BottomBar } from '../shared';
-import { Link } from 'react-router-dom';
-import Navbar from './Navbar';
-import Options from './Options';
-import React from 'react';
-import image from '../../assets/img/bg.png';
-import logo from '../../assets/img/GLC_logo.png';
+import { BottomBar } from "../shared";
+import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
+import Options from "./Options";
+import React from "react";
+import image from "../../assets/img/bg.png";
+import logo from "../../assets/img/GLC_logo.png";
 
 const HeroSection = () => {
   return (
@@ -31,8 +31,8 @@ const HeroSection = () => {
             </h1>
           </div>
         </div>
-        <Options />
       </main>
+      <Options />
       <BottomBar />
     </>
   );

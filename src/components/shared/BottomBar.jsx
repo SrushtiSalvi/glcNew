@@ -1,13 +1,16 @@
-import { AiOutlineHome } from 'react-icons/ai';
-import { BiNotepad } from 'react-icons/bi';
-import { BsFilePersonFill } from 'react-icons/bs';
-import { FcAbout } from 'react-icons/fc';
-import React from 'react';
-import Tooltip from './Tooltip';
+import { AiOutlineHome } from "react-icons/ai";
+import { BiNotepad } from "react-icons/bi";
+import { BsFilePersonFill } from "react-icons/bs";
+import { FcAbout } from "react-icons/fc";
+import React from "react";
+import Tooltip from "./Tooltip";
 
 const BottomBar = () => {
   return (
-    <ul className="fixed bottom-0 w-full bg-gray-100 divide-x flex lg:hidden items-center justify-around h-14 border-t z-[1000] ">
+    <ul
+      id="bottomBar"
+      className="fixed bottom-0 w-full bg-gray-100 divide-x flex lg:hidden items-center justify-around h-14 border-t z-[1000]"
+    >
       <li className="bottombar-list-item group">
         <Tooltip title="Home" />
         <AiOutlineHome className="bottombar-icon" />

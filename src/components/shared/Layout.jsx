@@ -1,12 +1,17 @@
-import { Outlet } from 'react-router-dom';
-import React from 'react';
+import Footer from "./Footer";
+import Navbar from "./Navbar";
+import { Outlet } from "react-router-dom";
+import React from "react";
 
 const Layout = () => {
   return (
-    <main className="p-5">
-      Layout
-      <Outlet />
-    </main>
+    <div className="flex flex-col h-screen justify-between">
+      <Navbar />
+      <div className="flex-grow">
+        <Outlet />
+      </div>
+      <Footer className="hidden" />
+    </div>
   );
 };
 

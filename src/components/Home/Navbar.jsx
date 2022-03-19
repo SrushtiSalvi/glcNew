@@ -1,8 +1,8 @@
-import { FaFacebookF, FaGooglePlus, FaLinkedinIn } from 'react-icons/fa';
-import { Link, NavLink } from 'react-router-dom';
+import { FaFacebookF, FaGooglePlus, FaLinkedinIn } from "react-icons/fa";
+import { Link, NavLink } from "react-router-dom";
 
-import { IoCallSharp } from 'react-icons/io5';
-import React from 'react';
+import { IoCallSharp } from "react-icons/io5";
+import React from "react";
 
 const Navbar = ({ className }) => {
   return (
@@ -13,24 +13,25 @@ const Navbar = ({ className }) => {
             to="/"
             className={({ isActive }) =>
               `px-1 mx-4 text-center text-base cursor-pointer capitalize hover:text-primary flex items-center justify-center ${
-                isActive ? 'text-navText' : 'text-white'
+                isActive ? "text-navText" : "text-white"
               }`
-            }>
+            }
+          >
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink to="/" className="text-white">
+          <NavLink to="/about-us" className="text-white">
             About Us
           </NavLink>
         </li>
         <li>
-          <NavLink to="/" className="text-white">
+          <NavLink to="/recruiters" className="text-white">
             Recruiters
           </NavLink>
         </li>
         <li>
-          <NavLink to="/" className="text-white">
+          <NavLink to="/students-corner" className="text-white">
             Students' Corner
           </NavLink>
         </li>
