@@ -13,8 +13,6 @@ const AllPosts = () => {
           <PostCard />
           <PostCard />
           <PostCard />
-          <PostCard />
-          <PostCard />
         </div>
       </div>
       <div className="hidden lg:block">
