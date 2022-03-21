@@ -9,26 +9,30 @@ import logo from "../../assets/img/GLC_logo.png";
 const Navbar = () => {
   return (
     <div>
-      <div className="bg-primary-dark text-white flex flex-row h-24 w-screen justify-between">
-        <div className="flex flex-row">
+      <div className="bg-primary-dark text-white flex flex-row h-24 justify-between">
+        <div className="flex flex-row  ">
           <Link to="/" className="cursor-pointer">
-            <img src={logo} alt="logo" className="h-24 ml-8 p-1 pr-8" />
+            <img
+              src={logo}
+              alt="logo"
+              className="h-full align-middle lg:h-24 lg:ml-8 p-3 lg:pr-8 my-auto"
+            />
           </Link>
-          <div className="flex flex-col justify-center font-poppins text-sm sm:text-lg font-semibold">
+          <div className="flex flex-col justify-center font-poppins text-xs sm:text-base md:text-lg font-semibold">
             <h1>Placement Committee</h1>
             <h1 className="text-navText-blue">
               Government Law College, Mumbai
             </h1>
           </div>
         </div>
-        <div className="flex flex-row space-x-6 text-lg mr-8 items-center">
+        <div className=" hidden lg:flex flex-row space-x-6 text-lg mr-8 items-center">
           <FaFacebookF />
           <FaLinkedinIn />
           <IoCallSharp />
           <FiMail />
         </div>
       </div>
-      <div className="bg-primary flex font-poppins">
+      <div className="hidden  bg-primary lg:flex font-poppins">
         <div className="space-x-24 mx-auto p-3">
           <Link to="/" className="text-white">
             Home
