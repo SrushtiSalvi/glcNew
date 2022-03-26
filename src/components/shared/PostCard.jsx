@@ -11,7 +11,7 @@ const PostCard = () => {
         <p className="md:text-2xl text-xl font-poppins font-medium line-clamp-1">
           Mr. Karim Patel
         </p>
-        <button className="rounded-xl border-green-400 border text-green-400 px-1 text-xs cursor-default">
+        <button className="rounded-full border-green-400 border text-white bg-green-400 font-poppins-medium px-5 text-sm cursor-default">
           open
         </button>
       </section>

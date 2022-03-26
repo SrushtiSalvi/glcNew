@@ -1,4 +1,8 @@
-import { HeroSection, NoticeSection } from "../components/Home";
+import {
+  EsteemedRecruiters,
+  HeroSection,
+  NoticeSection,
+} from "../components/Home";
 import React, { useEffect } from "react";
 
 const Home = () => {
@@ -7,9 +11,10 @@ const Home = () => {
   }, []);
 
   return (
-    <main className="pb-14">
+    <main className="pb-16">
       <HeroSection />
       <NoticeSection />
+      <EsteemedRecruiters />
     </main>
   );
 };
