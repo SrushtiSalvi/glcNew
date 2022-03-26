@@ -1,16 +1,22 @@
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import { Outlet } from "react-router-dom";
-import React from "react";
+import React, { useEffect } from "react";
+import MiniFooter from "./MiniFooter";
+import { BottomBar } from ".";
 
 const Layout = () => {
   return (
-    <div className="flex flex-col h-screen justify-between">
+    <div id="main" className="flex flex-col h-screen justify-between">
       <Navbar />
       <div className="flex-grow">
         <Outlet />
       </div>
-      <Footer className="hidden" />
+      <div className="hidden lg:block">
+        <Footer />
+      </div>
+      <MiniFooter />
+      <BottomBar />
     </div>
   );
 };

@@ -6,7 +6,7 @@ import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <div className="bg-primary-dark flex justify-evenly text-white font-poppins">
+    <div className="bg-primary flex justify-evenly text-white font-poppins">
       <div className="p-8">
         <h1 className="text-lg">Quick Links</h1>
         <hr className="my-4 w-16 bg-navText-blue" />
