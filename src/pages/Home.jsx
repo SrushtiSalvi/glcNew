@@ -5,6 +5,8 @@ import {
 } from "../components/Home";
 import React, { useEffect } from "react";
 
+import { BottomBar } from "../components/shared";
+
 const Home = () => {
   useEffect(() => {
     console.log(document.getElementById("bottomBar").offsetHeight);
@@ -15,6 +17,7 @@ const Home = () => {
       <HeroSection />
       <NoticeSection />
       <EsteemedRecruiters />
+      <BottomBar />
     </main>
   );
 };
