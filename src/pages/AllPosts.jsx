@@ -7,7 +7,7 @@ const AllPosts = () => {
       <h1 className="font-poppins text-center font-bold mt-6 text-xl">Posts</h1>
       <div>
         <h3 className="font-serif px-6">Latest</h3>
-        <div className="grid auto-rows-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="post_content_grid">
           <PostCard />
           <PostCard />
           <PostCard />
@@ -17,7 +17,7 @@ const AllPosts = () => {
       </div>
       <div className="hidden lg:block">
         <h3 className="font-serif px-6">Past Month</h3>
-        <div className="grid grid-rows-1 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="post_content_grid">
           <PostCard />
           <PostCard />
           <PostCard />
@@ -28,7 +28,7 @@ const AllPosts = () => {
       </div>
       <div className="hidden lg:block">
         <h3 className="font-serif px-6">January, 2022</h3>
-        <div className="grid grid-rows-1 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="post_content_grid">
           <PostCard />
           <PostCard />
           <PostCard />

@@ -9,6 +9,7 @@ function withOpacityValue(variable) {
 
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  important: true,
   theme: {
     extend: {
       fontFamily: {
@@ -32,7 +33,6 @@ module.exports = {
         navText: '#0BD5D9',
       },
       backgroundImage: {
-        'hero-section': 'url(assets/img/handshake.jpg)',
         'wave-bg': 'url(assets/img/bg.svg)',
       },
     },

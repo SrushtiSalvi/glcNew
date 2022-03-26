@@ -1,47 +1,42 @@
 import { FaFacebookF, FaGooglePlus, FaLinkedinIn } from "react-icons/fa";
-import { Link, NavLink } from "react-router-dom";
 
 import { IoCallSharp } from "react-icons/io5";
+import NavItem from "../shared/NavItem";
 import React from "react";
 
 const Navbar = ({ className }) => {
   return (
-    <nav className={`bg-transparent flex font-poppins-regular ${className}`}>
-      <ul className="flex justify-between w-full p-5">
+    <nav
+      className={`bg-transparent flex justify-center font-poppins-regular z-50 ${className}`}
+    >
+      <ul className=" flex-grow flex justify-center space-x-5 w-full p-5">
         <li>
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              `px-1 mx-4 text-center text-base cursor-pointer capitalize hover:text-primary flex items-center justify-center ${
-                isActive ? "text-navText" : "text-white"
-              }`
-            }
-          >
-            Home
-          </NavLink>
+          <NavItem title={`Home`} to="/" />
         </li>
         <li>
-          <NavLink to="/about-us" className="text-white">
-            About Us
-          </NavLink>
+          <NavItem title={`About Us`} to="/about-us" />
         </li>
         <li>
-          <NavLink to="/recruiters" className="text-white">
-            Recruiters
-          </NavLink>
+          <NavItem title={`Recruiters`} to="/recruiters" />
         </li>
         <li>
-          <NavLink to="/students-corner" className="text-white">
-            Students' Corner
-          </NavLink>
+          <NavItem title={`Student's Corner`} to="/students-corner" />
         </li>
       </ul>
-      <div className="lg:flex flex-row space-x-6 text-lg mr-10 items-center text-white hidden">
-        <FaFacebookF />
-        <FaLinkedinIn />
-        <IoCallSharp />
-        <FaGooglePlus />
-      </div>
+      <ul className="lg:flex flex-row space-x-6 text-lg mr-10 items-center text-white hidden absolute right-5 top-5">
+        <li>
+          <FaFacebookF />
+        </li>
+        <li>
+          <FaLinkedinIn />
+        </li>
+        <li>
+          <IoCallSharp />
+        </li>
+        <li>
+          <FaGooglePlus />
+        </li>
+      </ul>
     </nav>
   );
 };
