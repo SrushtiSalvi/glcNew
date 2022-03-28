@@ -33,7 +33,8 @@ module.exports = {
         navText: '#0BD5D9',
       },
       backgroundImage: {
-        'wave-bg': 'url(assets/img/bg.svg)',
+        wave: 'url(assets/Rectangle.svg)',
+        'herosection-lg': 'url(assets/herosection-lg.svg)',
       },
     },
   },

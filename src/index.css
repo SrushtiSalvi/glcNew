@@ -50,16 +50,16 @@
   .post_content_grid {
     @apply grid auto-rows-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5;
   }
-  #overlay {
-    height: 90%;
+  /* #overlay {
+    height: 100%;
     width: 100%;
     background-color: rgba(3, 27, 54, 0.5);
     position: absolute;
     z-index: -1;
-  }
-  @screen md {
+  } */
+  /* @screen md {
     #test:before {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       top: 8rem;
@@ -67,10 +67,15 @@
       width: 100%;
       height: 30rem;
       z-index: -1;
-      background-image: url("./assets/img/test.svg");
+      background-image: url('./assets/Rectangle.svg');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: right bottom;
     }
   }
+  @screen lg {
+    #test:before {
+      top: 5rem;
+    }
+  } */
 }
