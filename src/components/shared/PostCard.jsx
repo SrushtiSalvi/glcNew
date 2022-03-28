@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router";
 
 const PostCard = () => {
+  const navigate = useNavigate();
+
   const [companyName, setCompanyName] = useState("Mr. Karim Patel");
   const [status, setStatus] = useState("open");
   const [eligibility, setEligibility] = useState("V-IV, V-V & III-II, III-III");
@@ -43,7 +46,10 @@ const PostCard = () => {
         <p className="block text-gray-400 md:text-sm text-xs align-text-bottom">
           {postedDate}
         </p>
-        <button className="border border-black hover:bg-primary-dark transition-all duration-300 rounded-md md:px-3 md:py-1 text-xs px-2 md:text-sm">
+        <button
+          onClick={() => navigate("/post/:id")}
+          className="border border-black hover:bg-primary-dark transition-all duration-300 rounded-md md:px-3 md:py-1 text-xs px-2 md:text-sm"
+        >
           Learn More
         </button>
       </div>

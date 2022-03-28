@@ -6,7 +6,7 @@ const NavItem = ({ to, title }) => {
     <NavLink
       to={to}
       className={({ isActive }) =>
-        `px-1 mx-4 text-center text-lg font-poppins-medium cursor-pointer capitalize hover:text-navText hover:underline hover:underline-offset-8 hover:decoration-navText flex items-center justify-center ${
+        `px-1 mx-4 text-center font-poppins-medium cursor-pointer capitalize hover:text-navText hover:underline hover:underline-offset-8 hover:decoration-navText flex items-center justify-center ${
           isActive ? "text-navText" : "text-white"
         }`
       }

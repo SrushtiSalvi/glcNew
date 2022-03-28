@@ -11,7 +11,7 @@ const Footer = () => {
         <h1 className="text-lg">Quick Links</h1>
         <hr className="my-4 w-16 bg-navText-blue" />
         <div className="grid grid-cols-1 divide-gray-600 my-6 text-sm">
-          <Link to="/" className="hover:underline my-3">
+          <Link to="/recruiters" className="hover:underline my-3">
             Recruitment Process
           </Link>
           <hr />
@@ -19,17 +19,17 @@ const Footer = () => {
             GLC - Recruitment Handbook{" "}
           </Link>
           <hr />
-          <Link to="/" className="hover:underline my-3">
+          <Link to="/flagship-events" className="hover:underline my-3">
             Flagship Events
           </Link>
           <hr />
 
-          <Link to="/" className="hover:underline my-3">
+          <Link to="/cv-builder" className="hover:underline my-3">
             CV Builder{" "}
           </Link>
           <hr />
 
-          <Link to="/" className="hover:underline my-3">
+          <Link to="/students-corner" className="hover:underline my-3">
             Rules & Regulations{" "}
           </Link>
           <hr />
