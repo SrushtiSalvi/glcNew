@@ -1,24 +1,23 @@
-import Footer from "./Footer";
-import Navbar from "./Navbar";
-import { Outlet } from "react-router-dom";
-import React, { useEffect } from "react";
-import MiniFooter from "./MiniFooter";
-import { BottomBar } from ".";
+import React, { useEffect } from 'react'
+
+import { BottomBar } from '.'
+import Footer from './Footer'
+import MiniFooter from './MiniFooter'
+import Navbar from './Navbar'
+import { Outlet } from 'react-router-dom'
 
 const Layout = () => {
-  return (
-    <div id="main" className="flex flex-col h-screen justify-between">
-      <Navbar />
-      <div className="flex-grow">
-        <Outlet />
-      </div>
-      <div className="hidden lg:block">
-        <Footer />
-      </div>
-      <MiniFooter />
-      <BottomBar />
-    </div>
-  );
-};
+    return (
+        <div id="main" className="flex flex-col h-screen justify-between">
+            <Navbar />
+            <div className="flex-grow">
+                <Outlet />
+            </div>
+            <Footer />
+            <MiniFooter />
+            <BottomBar />
+        </div>
+    )
+}
 
-export default Layout;
+export default Layout
