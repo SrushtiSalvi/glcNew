@@ -4,14 +4,15 @@ import { MdOutlineNoteAlt } from "react-icons/md";
 import OptionBarItem from "./OptionBarItem";
 import React from "react";
 import { RiContactsFill } from "react-icons/ri";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 
 const Options = () => {
   const navigate = useNavigate();
+
   return (
     <div
-      id="options"
-      className="py-2 mb-10 relative grid auto-rows-auto grid-cols-4 gap-3  divide-x-0 md:divide-x md:divide-gray-700 "
+      id="test"
+      className="grid auto-rows-auto grid-cols-4 gap-3 -mt-12 mb-12  md:h-32 divide-x-0 md:divide-x bg-white md:divide-gray-700"
     >
       <OptionBarItem title={`Want to recruit?`}>
         <FaHandshake

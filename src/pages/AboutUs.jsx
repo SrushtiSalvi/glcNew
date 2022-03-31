@@ -86,10 +86,11 @@ const AboutUs = () => {
   ]);
   return (
     <>
-      <div className=" flex flex-col sm:flex-row m-4 lg:mx-20 lg:my-5 justify-center ">
-        <div className="flex flex-col  justify-end sm:m-3 md:m-8">
-          <div className="flex  justify-start sm:justify-end">
-            <div className="bg-gradient-to-r from-blue-600 to-blue-900 lg:w-36 lg:h-36 w-20 h-20 rounded-full p-3 align-middle ">
+      <div className=" flex flex-col sm:flex-row justify-center p-5 sm:p-16 space-y-8 sm:space-x-10">
+        {/* About GLC , Mumbai section */}
+        <div className="flex flex-col space-y-4 md:space-y-8 justify-end  text-gray-700">
+          <div className="flex justify-start sm:justify-end">
+            <div className="bg-gradient-to-r from-blue-600 to-blue-900 lg:w-36 lg:h-36 w-20 h-20 rounded-full p-5 align-middle ">
               <img src={logo} alt="logo" />
             </div>
           </div>
