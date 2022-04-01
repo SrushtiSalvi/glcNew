@@ -8,7 +8,7 @@ const Dropdown = ({ title, content }) => {
       <Disclosure className="">
         {({ open }) => (
           <>
-            <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xs md:sm font-medium text-left transition-all duration-300">
+            <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-xs md:text-sm font-medium text-left transition-all duration-300">
               {title}
               <IoChevronUpCircleOutline
                 className={`${

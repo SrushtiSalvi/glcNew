@@ -1,16 +1,14 @@
-import { BottomBar } from "../shared";
-import Navbar from "./Navbar";
-import Options from "./Options";
 import React from "react";
+import Navbar from "./Navbar";
 import image from "../../assets/herosection-lg.svg";
 import logo from "../../assets/img/GLC_logo.png";
 
-const HeroSection = () => {
+const HeroSection2 = () => {
   return (
-    <>
-      <Navbar className="hidden lg:flex absolute w-full" />
-      <main id="wave" className="relative overflow-hidden">
-        <img src={image} className="absolute w-full z-[-1]" alt="" />
+    <div className="bg-herosection-lg bg-no-repeat h-screen w-full bg-center bg-cover">
+      <Navbar className="text-xs sm:text-sm md:text-base lg:text-lg" />
+      <main id="wave" className="relative overflow-hidden ">
+        {/* <img src={image} className="absolute w-full z-[-1]" alt="" /> */}
         {/* <div id="overlay"></div> */}
         <div className="flex flex-row font-poppins-regular mt-12 lg:mt-36 justify-center lg:justify-start">
           <img src={logo} alt="logo" className="h-auto w-28 aspect-square" />
@@ -27,10 +25,8 @@ const HeroSection = () => {
           </div>
         </div>
       </main>
-      <Options />
-      <BottomBar />
-    </>
+    </div>
   );
 };
 
-export default HeroSection;
+export default HeroSection2;
