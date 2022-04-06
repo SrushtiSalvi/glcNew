@@ -9,7 +9,7 @@ const HeroSection2 = () => {
             <Navbar className="text-xs sm:text-sm md:text-base lg:text-lg" />
             <main
                 id="wave"
-                className="relative overflow-hidden h-full flex items-center justify-center xl:-m-24"
+                className="relative overflow-hidden h-full flex items-center justify-center xl:-my-24"
             >
                 {/* <img src={image} className="absolute w-full z-[-1]" alt="" /> */}
                 {/* <div id="overlay"></div> */}

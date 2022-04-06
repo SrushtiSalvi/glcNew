@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
+
 import { useNavigate } from 'react-router'
 
-const PostCard = ({ post, pageNumber, pageSize }) => {
+const PostCard = () => {
     const navigate = useNavigate()
 
-    const [companyName, setCompanyName] = useState('Mr. Karim Patel')
+    const [companyName, setCompanyName] = useState('Mr. Karim Pateldsadadsa')
     const [status, setStatus] = useState('open')
     const [eligibility, setEligibility] = useState(
         'V-IV, V-V & III-II, III-III'
@@ -16,19 +17,19 @@ const PostCard = ({ post, pageNumber, pageSize }) => {
 
     return (
         <div
-            className="m-5 p-3 md:px-6 md:pt-6  rounded-lg shadow-md shadow-gray-400 bg-gradient-to-br from-primary-dark to-primary-lighter text-white"
+            className="m-5 px-6 md:pt-6 pt-3 rounded-lg shadow-md shadow-gray-400 bg-gradient-to-br from-primary-dark to-primary-lighter text-white"
             data-aos="fade-up"
             data-aos-anchor-placement="top-bottom"
         >
-            <section className="flex justify-between mb-3 md:mb-16">
-                <p className="md:text-2xl text-lg font-poppins font-medium line-clamp-1">
-                    {post.company_name}
+            <section className="flex justify-between mb-3 md:mb-10">
+                <p className="md:text-2xl text-xl font-poppins font-medium">
+                    {companyName}
                 </p>
-                <button className="rounded-xl border-green-400 border text-green-400 px-1 text-xs cursor-default">
+                <button className="rounded-xl border-green-400 border text-green-400 px-2 py-1 text-xs cursor-default h-full">
                     {status}
                 </button>
             </section>
-            <section className="mt-3 md:mt-8 border-b md:pb-8 pb-4 pr-8">
+            <section className="border-b md:pb-8 pb-4 pr-8">
                 <ul className="text-sm space-y-2 md:space-y-4">
                     <li className="grid grid-cols-2 auto-rows-auto">
                         <>Eligibility</> <span>{eligibility}</span>
@@ -44,9 +45,9 @@ const PostCard = ({ post, pageNumber, pageSize }) => {
                     </li>
                 </ul>
             </section>
-            <div className="mt-4 md:mt-8 pb-3  md:pb-8 flex justify-between">
-                <p className="block text-gray-400 md:text-sm text-xs align-text-bottom">
-                    {post.postedDate}
+            <div className="mt-4 md:mt-8 pb-3 md:pb-8 flex justify-between">
+                <p className="flex items-center text-gray-400 md:text-sm text-xs">
+                    {postedDate}
                 </p>
                 <button
                     onClick={() => navigate('/post/:id')}
