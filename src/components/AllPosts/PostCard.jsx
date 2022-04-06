@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router'
 
 const PostCard = ({ post, pageNumber, pageSize }) => {
-    const navigate = useNavigate()
-
     const [companyName, setCompanyName] = useState('Mr. Karim Patel')
     const [status, setStatus] = useState('open')
     const [eligibility, setEligibility] = useState(
@@ -16,40 +14,40 @@ const PostCard = ({ post, pageNumber, pageSize }) => {
 
     return (
         <div
-            className="m-5 p-3 md:px-6 md:pt-6  rounded-lg shadow-md shadow-gray-400 bg-gradient-to-br from-primary-dark to-primary-lighter text-white"
+            className="m-5 px-6 md:pt-6 pt-3 rounded-lg shadow-md shadow-gray-400 bg-gradient-to-br from-primary-dark to-primary-lighter text-white"
             data-aos="fade-up"
             data-aos-anchor-placement="top-bottom"
         >
-            <section className="flex justify-between mb-3 md:mb-16">
-                <p className="md:text-2xl text-lg font-poppins font-medium line-clamp-1">
-                    {post.company_name}
+            <section className="flex justify-between mb-3">
+                <p className="md:text-2xl text-xl font-poppins font-medium line-clamp-1">
+                    {/* {post.company_name} */}company Name
                 </p>
                 <button className="rounded-xl border-green-400 border text-green-400 px-1 text-xs cursor-default">
                     {status}
                 </button>
             </section>
-            <section className="mt-3 md:mt-8 border-b md:pb-8 pb-4 pr-8">
+            <section className="mt-3 border-b pb-4 pr-8">
                 <ul className="text-sm space-y-2 md:space-y-4">
                     <li className="grid grid-cols-2 auto-rows-auto">
-                        <>Eligibility</> <span>{eligibility}</span>
+                        <>Eligibility</> <span>eligibility</span>
                     </li>
                     <li className="grid grid-cols-2 auto-rows-auto">
-                        <>Position</> <span>{position}</span>
+                        <>Position</> <span>position</span>
                     </li>
                     <li className="grid grid-cols-2 auto-rows-auto">
-                        <>Joining</> <span>{joining}</span>
+                        <>Joining</> <span>joining</span>
                     </li>
                     <li className="grid grid-cols-2 auto-rows-auto">
-                        <>Deadline</> <span>{deadline}</span>
+                        <>Deadline</> <span>deadline</span>
                     </li>
                 </ul>
             </section>
-            <div className="mt-4 md:mt-8 pb-3  md:pb-8 flex justify-between">
+            <div className="mt-4 md:mt-8 pb-3 md:pb-8 flex justify-between">
                 <p className="block text-gray-400 md:text-sm text-xs align-text-bottom">
-                    {post.postedDate}
+                    created on
                 </p>
                 <button
-                    onClick={() => navigate('/post/:id')}
+                    // onClick={() => navigate("/post/:id")}
                     className="border border-black hover:bg-primary-dark transition-all duration-300 rounded-md md:px-3 md:py-1 text-xs px-2 md:text-sm"
                 >
                     Learn More
