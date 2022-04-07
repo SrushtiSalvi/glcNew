@@ -8,7 +8,7 @@ const Navbar = ({ className }) => {
     return (
         <nav
             id="nav"
-            className={`bg-transparent lg:flex justify-center font-poppins-regular z-50 hidden  ${className}`}
+            className={`bg-transparent lg:flex justify-center font-poppins-regular z-[999] hidden  ${className}`}
         >
             <ul className=" flex-grow flex justify-center space-x-1 sm:space-x-3 md:space-x-5 w-full p-5">
                 <li>
@@ -27,17 +27,17 @@ const Navbar = ({ className }) => {
             <ul className=" relative xl:flex flex-row space-x-6 mr-10 items-center text-white hidden right-5 ">
                 <li>
                     <a href="https://www.facebook.com/groups/placements.glc/">
-                        <FaFacebookF />
+                        <FaFacebookF className="hover:text-navText" />
                     </a>
                 </li>
                 <li>
                     <a href="https://www.linkedin.com/in/vallabhhaker/">
-                        <FaLinkedinIn />
+                        <FaLinkedinIn className="hover:text-navText" />
                     </a>
                 </li>
                 <li>
                     <a href="tel:+918657156719">
-                        <IoCallSharp />
+                        <IoCallSharp className="hover:text-navText" />
                     </a>
                 </li>
             </ul>

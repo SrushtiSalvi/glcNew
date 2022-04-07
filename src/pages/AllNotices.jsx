@@ -8,7 +8,7 @@ const AllNotices = () => {
                 All Notices
             </h1>
             <section className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 auto-rows-auto gap-10 my-10">
-                <div className="container flex flex-col justify-self-center w-full border rounded-xl overflow-hidden">
+                <div className="container flex flex-col justify-self-center w-full border rounded-xl overflow-hidden hover:-translate-y-2 shadow-lg transition-all duration-150">
                     <img src={image} alt="img" className="" />
                     <div className="p-3">
                         <h1 className="font-medium">Title</h1>

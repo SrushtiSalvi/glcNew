@@ -1,18 +1,12 @@
 import Navbar from './Navbar'
 import React from 'react'
-import image from '../../assets/herosection-lg.svg'
 import logo from '../../assets/img/GLC_logo.png'
 
 const HeroSection2 = () => {
     return (
-        <div className="bg-herosection-sm lg:bg-herosection-lg bg-no-repeat w-full bg-center bg-cover h-64 xs:h-64 sm:h-80 md:h-96 lg:h-120 xl:h-144 2xl:h-144 3xl:h-144">
+        <div className="bg-herosection-lg bg-no-repeat w-full bg-center bg-cover h-64 xs:h-64 sm:h-80 md:h-96 lg:h-120 xl:h-144 2xl:h-144 3xl:h-[45rem]">
             <Navbar className="text-xs sm:text-sm md:text-base lg:text-lg" />
-            <main
-                id="wave"
-                className="relative overflow-hidden h-full flex items-center justify-center xl:-my-24"
-            >
-                {/* <img src={image} className="absolute w-full z-[-1]" alt="" /> */}
-                {/* <div id="overlay"></div> */}
+            <main className="relative h-full flex items-center justify-center xl:-my-24">
                 <div className="flex flex-row font-poppins-regular h-full items-center justify-center lg:justify-start">
                     <img
                         src={logo}

@@ -1,12 +1,15 @@
-import React, { useState } from 'react'
-import { Tab } from '@headlessui/react'
-import { Link } from 'react-router-dom'
-
-import { PostCard } from '../shared'
-import { useEffect } from 'react'
-import Pagination from './Pagination'
 import { BiSkipNext, BiSkipPrevious } from 'react-icons/bi'
+import React, { useState } from 'react'
+
+import { Link } from 'react-router-dom'
+import NoNotices from './NoNotices'
+import NoPosts from './NoPosts'
+import Pagination from './Pagination'
+import { PostCard } from '../shared'
+import { Tab } from '@headlessui/react'
 import { getAllVacancyPosts } from '../../api/api'
+import samplePDF from '../../assets/pdfs/sample.pdf'
+import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const NoticeSection = () => {
@@ -20,6 +23,8 @@ const NoticeSection = () => {
     const [hasPrevious, setHasPrevious] = useState(true)
 
     const [posts, setPosts] = useState([])
+    const [notices, setNotices] = useState([1, 2])
+
     const [pageNumber, setPageNumber] = useState(1)
     const [pageSize, setPageSize] = useState(10)
 
@@ -45,13 +50,13 @@ const NoticeSection = () => {
                 }
             }
             getData()
-            console.log(getData)
             //api call
             // set posts
             // set total pages
             //set hasnext
             // set hasprevious
-        }
+        },
+        []
         // [currentPage, postsPerPage]
     )
 
@@ -67,115 +72,166 @@ const NoticeSection = () => {
         <section>
             <div className="container mx-auto px-4 text-center ">
                 <Tab.Group>
-                    <Tab.List className="md:space-x-36 space-x-8  text-sm md:text-lg">
-                        <Tab className="underline underline-offset-4">
+                    <Tab.List className="text-sm md:text-xl flex w-3/4 mx-auto p-1 space-x-2 bg-primary-blue-900/20 rounded-xl">
+                        <Tab
+                            className={({ selected }) =>
+                                `w-1/2 md:py-2.5 md:text-xl leading-5 font-medium text-primary-dark rounded-lg focus:outline-none 
+                  ${
+                      selected
+                          ? 'bg-white shadow border-2'
+                          : 'text-primary-dark hover:bg-white/[0.20] hover:text-navText'
+                  }
+                    `
+                            }
+                        >
                             Placements Notices
                         </Tab>
-                        <Tab className="underline underline-offset-4">
+                        <Tab
+                            className={({ selected }) =>
+                                `w-1/2 md:py-2.5 md:text-xl leading-5 font-medium text-primary-dark rounded-lg focus:outline-none 
+                  ${
+                      selected
+                          ? 'bg-white shadow border-2'
+                          : 'text-primary-dark hover:bg-white/[0.20] hover:text-navText'
+                  }
+                    `
+                            }
+                        >
                             Event Notices
                         </Tab>
                     </Tab.List>
-                    <Tab.Panels>
+                    <Tab.Panels className="my-10">
                         <Tab.Panel>
-                            <div className="post_content_grid">
-                                {posts.length > 0
-                                    ? posts
-                                          .filter((post) => {
-                                              return (
-                                                  post.post_type === 'vacancy'
-                                              )
-                                          })
-                                          .map((post) => {
-                                              return (
-                                                  <PostCard
-                                                      isAdmin
-                                                      key={post.post_id}
-                                                      post={post}
-                                                      pageNumber={pageNumber}
-                                                      pageSize={pageSize}
-                                                  />
-                                              )
-                                          })
-                                    : 'no posts available'}
-                            </div>
+                            {posts.length > 0 ? (
+                                <div className="post_content_grid">
+                                    {posts
+                                        .filter((post) => {
+                                            return post.post_type === 'vacancy'
+                                        })
+                                        .map((post) => {
+                                            return (
+                                                <PostCard
+                                                    isAdmin
+                                                    key={post.post_id}
+                                                    post={post}
+                                                    pageNumber={pageNumber}
+                                                    pageSize={pageSize}
+                                                />
+                                            )
+                                        })}
+                                </div>
+                            ) : (
+                                <NoPosts />
+                            )}
                         </Tab.Panel>
-                        {/* <Pagination
-              postsPerPage={postsPerPage}
-              totalPosts={posts.length}
-              paginate={paginate}
-            /> */}
-                        <div className="flex flex-row justify-end gap-3 m-5">
-                            <BiSkipPrevious
-                                onClick={handlePageDecrease}
-                                disabled={!hasNext}
-                                className="text-xl"
-                            />
-                            <p>
-                                Page {pageNumber} / {pageSize}
-                            </p>
-                            <BiSkipNext
-                                onClick={handlePageIncrease}
-                                disabled={!hasPrevious}
-                                className="text-xl"
-                            />
-                        </div>
+
                         <Tab.Panel>
-                            <div className="shadow-lg gap-3 shadow-gray-600 my-5 p-4 text-center place-content-center flex flex-col md:grid md:grid-cols-2 md:auto-rows-auto">
-                                <Link
-                                    to="/notice/:id"
-                                    className="self-center border-gray-400 p-2 border-2 w-full"
-                                >
-                                    Notice title
-                                </Link>
-                                <Link
-                                    to="/notice/:id"
-                                    className="self-center border-gray-400 p-2 border-2 w-full"
-                                >
-                                    Notice title
-                                </Link>
-                                <Link
-                                    to="/notice/:id"
-                                    className="self-center border-gray-400 p-2 border-2 w-full"
-                                >
-                                    Notice title
-                                </Link>
-                                <Link
-                                    to="/notice/:id"
-                                    className="self-center border-gray-400 p-2 border-2 w-full"
-                                >
-                                    Notice title
-                                </Link>
-                                <Link
-                                    to="/notice/:id"
-                                    className="self-center border-gray-400 p-2 border-2 w-full"
-                                >
-                                    Notice title
-                                </Link>
-                                <Link
-                                    to="/notice/:id"
-                                    className="self-center border-gray-400 p-2 border-2 w-full"
-                                >
-                                    Notice title
-                                </Link>
-                                <Link
-                                    to="/notice/:id"
-                                    className="self-center border-gray-400 p-2 border-2 w-full"
-                                >
-                                    Notice title
-                                </Link>
-                                <Link
-                                    to="/notice/:id"
-                                    className="self-center border-gray-400 p-2 border-2 w-full"
-                                >
-                                    Notice title
-                                </Link>
-                            </div>
-                            <button
-                                className="bg-navText px-3 py-1 rounded-xl my-3 text-sm md:text-base"
-                                onClick={() => navigate('/all-notices')}
-                            >
-                                View more
-                            </button>
+                            {notices.length > 0 ? (
+                                <div className="grid md:grid-cols-2 gap-8 w-3/4 mx-auto">
+                                    <div className="flex flex-col justify-between h-full">
+                                        <h1 className="bg-navText p-2 text-white font-bold">
+                                            Notice Board
+                                        </h1>
+                                        <div className="border-2 border-navText h-full">
+                                            <div className="flex flex-col text-left max-h-40 md:max-h-80 overflow-y-scroll divide-y-2">
+                                                <Link
+                                                    to="/notice/:id"
+                                                    className="p-3 w-full font-poppins-medium text-blue-800 text-sm"
+                                                >
+                                                    Notice title
+                                                </Link>
+                                                <Link
+                                                    to="/notice/:id"
+                                                    className="p-3 w-full font-poppins-medium text-blue-800 text-sm"
+                                                >
+                                                    Notice title
+                                                </Link>
+                                                <Link
+                                                    to="/notice/:id"
+                                                    className="p-3 w-full font-poppins-medium text-blue-800 text-sm"
+                                                >
+                                                    Notice title
+                                                </Link>
+                                                <Link
+                                                    to="/notice/:id"
+                                                    className="p-3 w-full font-poppins-medium text-blue-800 text-sm"
+                                                >
+                                                    Notice title
+                                                </Link>
+                                                <Link
+                                                    to="/notice/:id"
+                                                    className="p-3 w-full font-poppins-medium text-blue-800 text-sm"
+                                                >
+                                                    Notice title
+                                                </Link>
+                                                <Link
+                                                    to="/notice/:id"
+                                                    className="p-3 w-full font-poppins-medium text-blue-800 text-sm"
+                                                >
+                                                    Notice title
+                                                </Link>
+                                                <Link
+                                                    to="/notice/:id"
+                                                    className="p-3 w-full font-poppins-medium text-blue-800 text-sm"
+                                                >
+                                                    Notice title
+                                                </Link>
+                                                <Link
+                                                    to="/notice/:id"
+                                                    className="p-3 w-full font-poppins-medium text-blue-800 text-sm"
+                                                >
+                                                    Notice title
+                                                </Link>
+                                                <Link
+                                                    to="/notice/:id"
+                                                    className="p-3 w-full font-poppins-medium text-blue-800 text-sm"
+                                                >
+                                                    Notice title
+                                                </Link>
+                                                <Link
+                                                    to="/notice/:id"
+                                                    className="p-2 w-full font-poppins-medium text-blue-800 text-sm"
+                                                >
+                                                    Notice title
+                                                </Link>
+                                            </div>
+                                            <button
+                                                className="border border-navText shadow-md w-1/3 mx-auto hover:bg-navText hover:text-white transition-all duration-150 px-2 py-1 rounded-xl my-3 text-sm "
+                                                onClick={() =>
+                                                    navigate('/all-notices')
+                                                }
+                                            >
+                                                View more
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-col justify-between h-full">
+                                        <h1 className="bg-navText w-full p-2 font-bold text-white">
+                                            Downloads
+                                        </h1>
+                                        <div className="w-full h-full border-2 border-navText text-blue-800 divide-y-2 ">
+                                            <Link
+                                                className="md:text-sm font-medium flex p-3"
+                                                to={samplePDF}
+                                                target="_blank"
+                                                download
+                                            >
+                                                Sample CV
+                                            </Link>
+                                            <Link
+                                                className="md:text-sm font-medium flex p-3"
+                                                to={samplePDF}
+                                                target="_blank"
+                                                download
+                                            >
+                                                Sample CV1
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            ) : (
+                                <NoNotices />
+                            )}
                         </Tab.Panel>
                     </Tab.Panels>
                 </Tab.Group>

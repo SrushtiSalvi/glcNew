@@ -4,15 +4,12 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
 
+import { A11y, Autoplay, Keyboard, Pagination } from 'swiper'
+import { Swiper, SwiperSlide } from 'swiper/react'
+
+import { Link } from 'react-router-dom'
+import React from 'react'
 import recruiter1 from '../../assets/logos/Argus Partners.jpg'
-import recruiter2 from '../../assets/logos/AZB & Partners.jpg'
-import recruiter3 from '../../assets/logos/Bharucha & Partners.jpg'
-import recruiter4 from '../../assets/logos/Cyril Amarchand Mangaldas.png'
-import recruiter5 from '../../assets/logos/DSK Legal.jpg'
-import recruiter6 from '../../assets/logos/IndusLaw.png'
-import recruiter7 from '../../assets/logos/Jerome Merchant + Partners.png'
-import recruiter8 from '../../assets/logos/Juris Corp.jpg'
-import recruiter9 from '../../assets/logos/King Stubb & Kasiva.png'
 import recruiter10 from '../../assets/logos/L&L Partners.jpg'
 import recruiter11 from '../../assets/logos/Lakshmikumaran & Sridharan.jpg'
 import recruiter12 from '../../assets/logos/Lexicon Law Partners.png'
@@ -23,12 +20,14 @@ import recruiter16 from '../../assets/logos/Samvad Partners.jpg'
 import recruiter17 from '../../assets/logos/Saraf & Partners Law Offices.png'
 import recruiter18 from '../../assets/logos/Shardul Amarchand Mangaldas & co..jpg'
 import recruiter19 from '../../assets/logos/Trilegal.png'
-
-import { A11y, Autoplay, Keyboard, Pagination } from 'swiper'
-import { Swiper, SwiperSlide } from 'swiper/react'
-
-import { Link } from 'react-router-dom'
-import React from 'react'
+import recruiter2 from '../../assets/logos/AZB & Partners.jpg'
+import recruiter3 from '../../assets/logos/Bharucha & Partners.jpg'
+import recruiter4 from '../../assets/logos/Cyril Amarchand Mangaldas.png'
+import recruiter5 from '../../assets/logos/DSK Legal.jpg'
+import recruiter6 from '../../assets/logos/IndusLaw.png'
+import recruiter7 from '../../assets/logos/Jerome Merchant + Partners.png'
+import recruiter8 from '../../assets/logos/Juris Corp.jpg'
+import recruiter9 from '../../assets/logos/King Stubb & Kasiva.png'
 import { useState } from 'react'
 
 const EsteemedRecruiters = () => {
@@ -111,8 +110,8 @@ const EsteemedRecruiters = () => {
         },
     ])
     return (
-        <section className="mx-4">
-            <h1 className="capitalize text-center italic font-poppins-medium">
+        <section className="m-4 my-10">
+            <h1 className="capitalize text-center font-poppins-medium text-3xl my-2">
                 our esteemed recruiters
             </h1>
             <Swiper
