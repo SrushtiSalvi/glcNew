@@ -12,7 +12,7 @@ const Options = () => {
   return (
     <div
       id="test"
-      className="grid auto-rows-auto grid-cols-4 gap-3 -mt-12 mb-12  md:h-32 divide-x-0 md:divide-x bg-white md:divide-gray-700"
+      className="grid auto-rows-auto grid-cols-4 gap-3 mt-2 lg:-mt-12 mb-12 h-20 md:h-32 divide-x-0 md:divide-x bg-white md:divide-gray-700 "
     >
       <OptionBarItem title={`Want to recruit?`}>
         <FaHandshake
