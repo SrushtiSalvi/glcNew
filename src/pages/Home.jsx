@@ -6,6 +6,7 @@ import {
 import React, { useEffect } from "react";
 
 import { BottomBar } from "../components/shared";
+import { FlagshipEvents } from ".";
 
 const Home = () => {
   useEffect(() => {
@@ -16,6 +17,7 @@ const Home = () => {
     <main className="pb-16">
       <HeroSection />
       <NoticeSection />
+      <FlagshipEvents />
       <EsteemedRecruiters />
       <BottomBar />
     </main>

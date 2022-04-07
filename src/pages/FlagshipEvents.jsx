@@ -1,17 +1,62 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import FlagshipTiles from "../components/FlagshipEvents/FlagshipTiles";
 
 const FlagshipEvents = () => {
+  const current = new Date();
+  const currentMonth = current.getMonth() + 1;
+  // const currentMonth = 10;
+
   return (
-    <div className="m-4 flex space-x-2">
-      <div className="border-2 flex-1 border-x-navText w-1/3">
-        February Placement Week
-      </div>
-      <div className=" border-2 flex-1 border-x-navText w-1/3">
-        GLC E-Campus Recruitment
-      </div>
-      <div className=" border-2 flex-1 border-x-navText w-1/3">
-        October Placement Week
-      </div>
+    <div className="my-8 flex space-x-4 items-center justify-center">
+      {currentMonth === 2 ? (
+        <FlagshipTiles
+          title="GLC E-CAMPUS RECRUITMENT"
+          position="Associate"
+          eligibility="Final Year Students (V-V & III-III)"
+        />
+      ) : (
+        <FlagshipTiles
+          title="FEBRUARY PLACEMENT WEEK"
+          position="Intern, Articled Clerk, Associate"
+          eligibility="V-III, V-IV, V-V & III-I, III-II, III-III"
+        />
+      )}
+      {currentMonth === 2 ? (
+        <FlagshipTiles
+          centerTile
+          title="FEBRUARY PLACEMENT WEEK"
+          position="Intern, Articled Clerk, Associate"
+          eligibility="V-III, V-IV, V-V & III-I, III-II, III-III"
+        />
+      ) : currentMonth === 10 ? (
+        <FlagshipTiles
+          centerTile
+          title="OCTOBER PLACEMENT WEEK"
+          position="Associate"
+          eligibility="Final Year Students(V-V & III-III)"
+        />
+      ) : (
+        <FlagshipTiles
+          centerTile
+          title="GLC E-CAMPUS RECRUITMENT"
+          position="Associate"
+          eligibility="Final Year Students (V-V & III-III)"
+        />
+      )}
+      {currentMonth === 10 ? (
+        <FlagshipTiles
+          title="GLC E-CAMPUS RECRUITMENT"
+          position="Associate"
+          eligibility="Final Year Students (V-V & III-III)"
+        />
+      ) : (
+        <FlagshipTiles
+          title="OCTOBER PLACEMENT WEEK"
+          position="Associate"
+          eligibility="Final Year Students(V-V & III-III)"
+        />
+      )}
     </div>
   );
 };

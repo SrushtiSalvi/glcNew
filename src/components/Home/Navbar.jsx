@@ -7,7 +7,7 @@ import React from "react";
 const Navbar = ({ className }) => {
   return (
     <nav
-      className={`bg-transparent flex justify-center font-poppins-regular z-50 ${className}`}
+      className={`bg-transparent flex justify-center font-poppins-regular z-50 mt-5 ${className}`}
     >
       <ul className=" flex-grow flex justify-center space-x-1 sm:space-x-3 md:space-x-5 w-full p-5">
         <li>
