@@ -1,11 +1,9 @@
-import FlagshipTiles from '../components/FlagshipEvents/FlagshipTiles'
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, { useState } from 'react'
+
+import { FlagshipTiles } from '../components/FlagshipEvents'
 
 const FlagshipEvents = () => {
-    const current = new Date()
-    const currentMonth = current.getMonth() + 1
-    // const currentMonth = 10;
+    const [currentMonth, setCurrentMonth] = useState(new Date().getMonth())
 
     return (
         <div className="my-8 flex space-x-4 items-center justify-center">

@@ -1,9 +1,9 @@
-import React from 'react'
+import { Dropdown } from '../components/StudentsCorner'
 import { IoBookSharp } from 'react-icons/io5'
-import { RiFileList3Fill } from 'react-icons/ri'
-import { MdOutlineArrowForwardIos } from 'react-icons/md'
-import Dropdown from '../components/StudentsCorner/Dropdown'
 import { Link } from 'react-router-dom'
+import { MdOutlineArrowForwardIos } from 'react-icons/md'
+import React from 'react'
+import { RiFileList3Fill } from 'react-icons/ri'
 import samplePDF from '../assets/pdfs/sample.pdf'
 import { useNavigate } from 'react-router-dom'
 

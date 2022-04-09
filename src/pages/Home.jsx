@@ -1,25 +1,24 @@
+import { BottomBar, Footer } from '../components/shared'
 import {
     EsteemedRecruiters,
     HeroSection,
     NoticeSection,
+    Options,
 } from '../components/Home'
-import React, { useEffect } from 'react'
 
-import { BottomBar } from '../components/shared'
+import React from 'react'
 
-const Home = () => {
-    useEffect(() => {
-        console.log(document.getElementById('bottomBar').offsetHeight)
-    }, [])
-
+const Home2 = () => {
     return (
-        <main className="pb-16">
+        <div>
             <HeroSection />
+            <Options />
             <NoticeSection />
             <EsteemedRecruiters />
             <BottomBar />
-        </main>
+            <Footer />
+        </div>
     )
 }
 
-export default Home
+export default Home2
