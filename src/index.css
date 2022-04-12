@@ -5,49 +5,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa&display=swap');
 
 @layer base {
-    :root {
-        --primary-lighter: 0 57 105;
-        /* #003969 */
-        --primary-light: 3 49 89;
-        /* #033159 */
-        --primary: 0 32 69;
-        /* #002045 */
-        --primary-dark: 3 27 54;
-        /* #031B36 */
-    }
-    @font-face {
-        font-family: 'Poppins Medium';
-        src: url('./assets/fonts/Poppins-Medium.ttf');
-    }
-    @font-face {
-        font-family: 'Poppins';
-        src: url('./assets/fonts/Poppins-Regular.ttf');
-    }
-    @font-face {
-        font-family: 'Poppins Thin';
-        src: url('./assets/fonts/Poppins-Thin.ttf');
-    }
-    @font-face {
-        font-family: 'Poppins Light';
-        src: url('./assets/fonts/Poppins-Light.ttf');
-    }
-    @font-face {
-        font-family: 'Poppins SemiBold';
-        src: url('./assets/fonts/Poppins-SemiBold.ttf');
-    }
+  :root {
+    --primary-lighter: 0 57 105;
+    /* #003969 */
+    --primary-light: 3 49 89;
+    /* #033159 */
+    --primary: 0 32 69;
+    /* #002045 */
+    --primary-dark: 3 27 54;
+    /* #031B36 */
+  }
+  @font-face {
+    font-family: 'Poppins Medium';
+    src: url('./web/assets/fonts/Poppins-Medium.ttf');
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('./web/assets/fonts/Poppins-Regular.ttf');
+  }
+  @font-face {
+    font-family: 'Poppins Thin';
+    src: url('./web/assets/fonts/Poppins-Thin.ttf');
+  }
+  @font-face {
+    font-family: 'Poppins Light';
+    src: url('./web/assets/fonts/Poppins-Light.ttf');
+  }
+  @font-face {
+    font-family: 'Poppins SemiBold';
+    src: url('./web/assets/fonts/Poppins-SemiBold.ttf');
+  }
 }
 @layer components {
-    #bg {
-        z-index: -1;
-        @apply absolute w-full bottom-0;
-    }
-    .bottombar-icon {
-        @apply h-5 w-5 group-hover:-translate-y-1 transition-all duration-150 ease-in-out;
-    }
-    .bottombar-list-item {
-        @apply flex-1 justify-center flex h-full items-center cursor-pointer hover:bg-white;
-    }
-    .post_content_grid {
-        @apply grid auto-rows-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
-    }
+  #bg {
+    z-index: -1;
+    @apply absolute w-full bottom-0;
+  }
+  .bottombar-icon {
+    @apply h-5 w-5 group-hover:-translate-y-1 transition-all duration-150 ease-in-out;
+  }
+  .bottombar-list-item {
+    @apply flex-1 justify-center flex h-full items-center cursor-pointer hover:bg-white;
+  }
+  .post_content_grid {
+    @apply grid auto-rows-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
+  }
+  select option {
+    background-color: #485d76;
+  }
+  input[type='date']::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 2px;
+    opacity: 0.6;
+    filter: invert(0.8);
+  }
+
+  input[type='date']::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+  }
 }

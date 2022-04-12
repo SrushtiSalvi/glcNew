@@ -1,17 +1,23 @@
 FRONTEND DEADLINE: SUNDAY, 20 MARCH 2022, 11:59 PM
-project setup: 1. repo
-  2. folder structure
-  3. packages(tailwind, react-toastify, axios, prettier)
-  4. formating and linting
+project setup: 1. repo 2. folder structure 3. packages(tailwind, react-toastify, axios, prettier) 4. formating and linting
 routing setup:
-layout: 1. navbar
-  2. footer
-pages: 1. landing page - kaushal
-  2. all posts -srushti
-  3. single post -apurva
-  4. about us -apurva
-  5. recruiters -apurva
-  6. student section - srushti
-  7. cv builder -kaushal
-  8. flagship events -srushti
-admin:
+layout: 1. navbar 2. footer
+pages:
+
+1. landing page -
+   a. Logo,
+   b. main text,
+   c. curve,
+   d. notices section (tabs, search),
+   e. notices section pagination,
+   f. Images for recruiters
+   g. Responsiveness: HeroSection, Navbar, BottomBar tooltip and labels
+   h. Navbar center
+2. all posts
+3. single post
+4. about us
+5. recruiters
+6. student section
+7. cv builder
+8. flagship events
+   admin:

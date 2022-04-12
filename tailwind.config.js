@@ -34,8 +34,8 @@ module.exports = {
             },
             backgroundImage: {
                 wave: 'url(assets/Rectangle.svg)',
-                'herosection-lg': 'url(assets/herosection-lg.svg)',
-                'herosection-sm': 'url(assets/img/bg.png)',
+                'herosection-lg': 'url(web/assets/herosection-lg.svg)',
+                'herosection-sm': 'url(web/assets/img/bg.png)',
             },
             spacing: {
                 144: '36rem',
@@ -65,5 +65,8 @@ module.exports = {
             // => @media (min-width: 1440px) { ... }
         },
     },
-    plugins: [require('@tailwindcss/line-clamp')],
+    plugins: [
+        require('@tailwindcss/line-clamp'),
+        require('@tailwindcss/forms'),
+    ],
 }
