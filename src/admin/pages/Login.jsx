@@ -26,7 +26,7 @@ const Login = () => {
       setPassword('')
       setUsername('')
       toast.success('Login success!')
-      navigate('/admin/dashboard')
+      navigate('/admin/vacancy-posts')
     } else {
       setIsLoading(false)
       setPassword('')
@@ -38,7 +38,9 @@ const Login = () => {
     <main className="p-5 bg-gray-600 h-screen">
       <section className="mx-auto mt-40 max-w-lg">
         <Card>
-          <CardHeader>Login</CardHeader>
+          <CardHeader className="font-poppins-semibold text-base">
+            GLC Admin Login
+          </CardHeader>
           <CardBody>
             <form>
               <section className="sm:rounded-md">

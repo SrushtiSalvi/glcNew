@@ -11,8 +11,9 @@ import {
   SinglePost,
   StudentsCorner,
 } from './web/pages'
-import { Route, Routes } from 'react-router-dom'
+import { Outlet, Route, Routes } from 'react-router-dom'
 
+import AddEsteemedRecruiter from './admin/pages/AddEsteemedRecruiter'
 import AddNoticePost from './admin/pages/AddNoticePost'
 import AddVacancyPost from './admin/pages/AddVacancyPost'
 import AdminLayout from './admin/shared/AdminLayout'
@@ -24,11 +25,9 @@ import EsteemedRecruiters from './admin/pages/EsteemedRecruiters'
 import { Layout } from './web/components/shared'
 import { Login } from './admin/pages'
 import NoticePosts from './admin/pages/NoticePosts'
-import Notices from './admin/pages/Notices'
 import PastRecruiters from './admin/pages/PastRecruiters'
 import React from 'react'
 import { ToastContainer } from 'react-toastify'
-import Vacancy from './admin/pages/Vacancy'
 import VacancyPosts from './admin/pages/VacancyPosts'
 
 const AllRoutes = () => {
@@ -55,19 +54,27 @@ const AllRoutes = () => {
           <Route path="notice/:id" element={<SingleNotice />} />
         </Route>
         <Route path="/admin/login" element={<Login />} />
+
         <Route path="/admin" element={<AdminLayout />}>
           <Route path="dashboard" element={<Dashboard />} />
-          <Route path="vacancy-posts" element={<Vacancy />}>
+
+          <Route path="vacancy-posts" element={<Outlet />}>
             <Route path="" element={<VacancyPosts />} />
             <Route path="add" element={<AddVacancyPost />} />
             <Route path="edit/:id" element={<EditVacancyPost />} />
           </Route>
-          <Route path="notices" element={<Notices />}>
+
+          <Route path="notices" element={<Outlet />}>
             <Route path="" element={<NoticePosts />} />
             <Route path="add" element={<AddNoticePost />} />
             <Route path="edit/:id" element={<EditNoticePost />} />
           </Route>
-          <Route path="esteemed-recruiters" element={<EsteemedRecruiters />} />
+
+          <Route path="esteemed-recruiters" element={<Outlet />}>
+            <Route path="" element={<EsteemedRecruiters />} />
+            <Route path="add" element={<AddEsteemedRecruiter />} />
+          </Route>
+
           <Route path="contact-details" element={<ContactDetails />} />
           <Route path="past-recruiters" element={<PastRecruiters />} />
         </Route>
