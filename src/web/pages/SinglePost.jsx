@@ -18,6 +18,7 @@ const SinglePost = () => {
       const response = await getPostById(id)
       if (response.success) {
         setPost(response.data.vaccancy_post)
+        console.log(response)
       }
     }
     fetchData()
@@ -27,7 +28,9 @@ const SinglePost = () => {
     <div className="sm:m-16 m-6 space-y-4 sm:space-y-6">
       <div className="flex flex-col md:flex-row text-center items-center flex-wrap justify-center">
         <img
-          src={`${process.env.REACT_APP_HOSTNAME}/${post.logo_url || ''}`}
+          src={`${process.env.REACT_APP_HOSTNAME}/static/${
+            post.image_path || ''
+          }`}
           alt="company_logo"
           className="h-16 w-16 sm:h-32 sm:w-32 inline-block"
         />

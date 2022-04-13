@@ -78,20 +78,16 @@ const NoticeSection = () => {
             <Tab.Panel>
               {posts.length > 0 ? (
                 <div className="post_content_grid">
-                  {posts
-                    .filter((post) => {
-                      return post.post_type === 'vacancy'
-                    })
-                    .map((post) => {
-                      return (
-                        <PostCard
-                          key={post._id}
-                          post={post}
-                          pageNumber={pageNumber}
-                          pageSize={pageSize}
-                        />
-                      )
-                    })}
+                  {posts.map((post) => {
+                    return (
+                      <PostCard
+                        key={post._id}
+                        post={post}
+                        pageNumber={pageNumber}
+                        pageSize={pageSize}
+                      />
+                    )
+                  })}
                 </div>
               ) : (
                 <NoPosts />
