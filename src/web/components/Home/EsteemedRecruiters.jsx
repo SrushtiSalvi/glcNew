@@ -1,33 +1,33 @@
 // Import Swiper styles
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
-import 'swiper/css/scrollbar'
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
-import { A11y, Autoplay, Keyboard, Pagination } from 'swiper'
-import React, { useEffect } from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react'
+import { A11y, Autoplay, Keyboard, Pagination } from 'swiper';
+import React, { useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { Link } from 'react-router-dom'
-import { getEsteemedRecruiters } from '../../../admin/api/common'
-import { toast } from 'react-toastify'
-import { useState } from 'react'
+import { Link } from 'react-router-dom';
+import { getEsteemedRecruiters } from '../../../admin/api/common';
+import { toast } from 'react-toastify';
+import { useState } from 'react';
 
 const EsteemedRecruiters = () => {
-  const [recruiters, setRecruiters] = useState([])
-  const [pageNumber, setPageNumber] = useState(1)
-  const [pageSize, setPageSize] = useState(10)
+  const [recruiters, setRecruiters] = useState([]);
+  const [pageNumber, setPageNumber] = useState(1);
+  const [pageSize, setPageSize] = useState(10);
   useEffect(() => {
     const fetchData = async () => {
-      let res = await getEsteemedRecruiters(pageNumber, pageSize)
+      let res = await getEsteemedRecruiters(pageNumber, pageSize);
       if (res['success']) {
-        setRecruiters(res['data']['image_paths'])
+        setRecruiters(res['data']['image_paths']);
       } else {
-        toast.error(res['message'])
+        toast.error(res['message']);
       }
-    }
-    fetchData()
-  }, [pageNumber, pageSize])
+    };
+    fetchData();
+  }, [pageNumber, pageSize]);
 
   return (
     <section className="m-4 my-10">
@@ -50,9 +50,7 @@ const EsteemedRecruiters = () => {
           <SwiperSlide key={index}>
             <div className="flex flex-col items-center justify-center bg-white drop-shadow-lg shadow-lg p-3">
               <img
-                src={`${process.env.REACT_APP_HOSTNAME}/static/${
-                  recruiter || ''
-                }`}
+                src={`${process.env.REACT_APP_HOSTNAME}/static/${recruiter || ''}`}
                 alt=""
                 className="h-16 md:h-20 lg:h-32 w-auto"
               />
@@ -68,7 +66,7 @@ const EsteemedRecruiters = () => {
         </Link>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default EsteemedRecruiters
+export default EsteemedRecruiters;

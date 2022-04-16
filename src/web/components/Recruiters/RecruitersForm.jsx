@@ -1,12 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 const TextInput = ({ label, id, name, required, className, placeholder }) => {
   return (
     <div>
-      <label
-        className=" text-sm md:text-base xl:text-lg block px-8 py-2 text-white"
-        htmlFor={id}
-      >
+      <label className=" text-sm md:text-base xl:text-lg block px-8 py-2 text-white" htmlFor={id}>
         {label}
       </label>
       <input
@@ -18,15 +15,12 @@ const TextInput = ({ label, id, name, required, className, placeholder }) => {
         className={`${className} w-full px-8 placeholder:text-gray-300  border-gray-500 border rounded-full bg-[#e5e5e53b]  text-sm md:text-base xl:text-lg  py-3  focus:shadow-md focus:outline-none text-white`}
       />
     </div>
-  )
-}
+  );
+};
 const IntInput = ({ label, id, contact, required, className, placeholder }) => {
   return (
     <div>
-      <label
-        className="text-sm md:text-base xl:text-lg block px-8 py-2 text-white"
-        htmlFor={id}
-      >
+      <label className="text-sm md:text-base xl:text-lg block px-8 py-2 text-white" htmlFor={id}>
         {label}
       </label>
       <input
@@ -38,8 +32,8 @@ const IntInput = ({ label, id, contact, required, className, placeholder }) => {
         className={`${className} w-full px-8 placeholder:text-gray-300  border-gray-500 border rounded-full bg-[#e5e5e53b]  text-sm md:text-base xl:text-lg  py-3  focus:shadow-md focus:outline-none text-white`}
       />
     </div>
-  )
-}
+  );
+};
 
 const RecruitersForm = () => {
   return (
@@ -127,7 +121,7 @@ const RecruitersForm = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default RecruitersForm
+export default RecruitersForm;

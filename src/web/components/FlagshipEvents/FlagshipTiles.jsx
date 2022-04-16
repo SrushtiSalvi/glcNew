@@ -1,59 +1,72 @@
-// npm install react-flippy
-import Flippy, { BackSide, FrontSide } from 'react-flippy'
+import FlagshipSingleTile from './FlagshipSingleTile';
+import React from 'react';
+import TileImg1 from '../../assets/Rectangle 185.png';
+import TileImg2 from '../../assets/Rectangle 186.png';
+import TileImg3 from '../../assets/Rectangle 187.png';
 
-import React from 'react'
-
-const FlagshipTiles = ({ title, centerTile, position, eligibility }) => {
+const FlagshipTiles = () => {
+  const current = new Date();
+  const currentMonth = current.getMonth() + 1;
+  // const currentMonth = 10;
   return (
-    <Flippy
-      flipOnHover={true}
-      infinte
-      flipDirection="vertical"
-      className={`flex flex-col justify-center items-center ${
-        centerTile ? 'w-96 h-96 ' : 'w-80 h-80 opacity-90 '
-      }`}
-    >
-      <FrontSide className="flex bg-primary text-white rounded-md text-center justify-center items-center">
-        <p
-          className={` font-medium ${
-            centerTile ? 'text-xl md:text-4xl ' : 'text-lg md:text-3xl'
-          }`}
-        >
-          {title}
-        </p>
-      </FrontSide>
-      <BackSide className="flex flex-col text-primary border border-primary rounded-md text-center justify-center items-center">
-        <p
-          className={` font-bold ${
-            centerTile ? 'text-md md:text-xl' : 'text-md md:text-lg'
-          }`}
-        >
-          POSITIONS
-        </p>
-        <p
-          className={`${
-            centerTile ? 'text-md md:text-xl' : 'text-sm md:text-lg'
-          }`}
-        >
-          {position}
-        </p>
-        <p
-          className={`mt-6 font-bold ${
-            centerTile ? 'text-md md:text-xl' : 'text-md md:text-lg'
-          }`}
-        >
-          ELIGIBILITY
-        </p>
-        <p
-          className={`${
-            centerTile ? 'text-md md:text-xl' : 'text-sm md:text-lg'
-          }`}
-        >
-          {eligibility}
-        </p>
-      </BackSide>
-    </Flippy>
-  )
-}
+    <div className="my-8 flex space-x-4 items-center justify-center">
+      {currentMonth === 2 ? (
+        <FlagshipSingleTile
+          img={TileImg3}
+          title="GLC E-CAMPUS RECRUITMENT"
+          position="Associate"
+          eligibility="Final Year Students (V-V & III-III)"
+        />
+      ) : (
+        <FlagshipSingleTile
+          img={TileImg1}
+          title="FEBRUARY PLACEMENT WEEK"
+          position="Intern, Articled Clerk, Associate"
+          eligibility="V-III, V-IV, V-V & III-I, III-II, III-III"
+        />
+      )}
+      {currentMonth === 2 ? (
+        <FlagshipSingleTile
+          img={TileImg1}
+          centerTile
+          title="FEBRUARY PLACEMENT WEEK"
+          position="Intern, Articled Clerk, Associate"
+          eligibility="V-III, V-IV, V-V & III-I, III-II, III-III"
+        />
+      ) : currentMonth === 10 ? (
+        <FlagshipSingleTile
+          img={TileImg2}
+          centerTile
+          title="OCTOBER PLACEMENT WEEK"
+          position="Associate"
+          eligibility="Final Year Students(V-V & III-III)"
+        />
+      ) : (
+        <FlagshipSingleTile
+          img={TileImg3}
+          centerTile
+          title="GLC E-CAMPUS RECRUITMENT"
+          position="Associate"
+          eligibility="Final Year Students (V-V & III-III)"
+        />
+      )}
+      {currentMonth === 10 ? (
+        <FlagshipSingleTile
+          img={TileImg3}
+          title="GLC E-CAMPUS RECRUITMENT"
+          position="Associate"
+          eligibility="Final Year Students (V-V & III-III)"
+        />
+      ) : (
+        <FlagshipSingleTile
+          img={TileImg2}
+          title="OCTOBER PLACEMENT WEEK"
+          position="Associate"
+          eligibility="Final Year Students(V-V & III-III)"
+        />
+      )}
+    </div>
+  );
+};
 
-export default FlagshipTiles
+export default FlagshipTiles;

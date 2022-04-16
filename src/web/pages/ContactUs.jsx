@@ -1,7 +1,7 @@
-import { IoCall, IoMail } from 'react-icons/io5'
+import { IoCall, IoMail } from 'react-icons/io5';
 
-import { FaMapMarkerAlt } from 'react-icons/fa'
-import React from 'react'
+import { FaMapMarkerAlt } from 'react-icons/fa';
+import React from 'react';
 
 const ContactUs = () => {
   return (
@@ -15,7 +15,6 @@ const ContactUs = () => {
       </map>
       <div className="z-10 relative flex flex-col items-center w-3/5 mx-auto py-10">
         {/* className="absolute w-screen -z-10 hidden lg:block top-24" */}
-        <h1 className="font-bold w-full text-white">Reach Out To Us</h1>
         <div className="flex lg:flex-row flex-col rounded-sm">
           <div className="flex flex-col justify-center items-center bg-primary-light text-sm w-full p-8 text-white">
             <h1 className="mb-10 justify-self-start w-full">
@@ -25,8 +24,8 @@ const ContactUs = () => {
               <section className="flex space-x-5">
                 <FaMapMarkerAlt />
                 <p className="w-2/3">
-                  The Government Law College 'A' Road, Churchgate Mumbai - 400
-                  020 Maharastra - India
+                  The Government Law College 'A' Road, Churchgate Mumbai - 400 020 Maharastra -
+                  India
                 </p>
               </section>
               <section className="flex space-x-3">
@@ -109,7 +108,7 @@ const ContactUs = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ContactUs
+export default ContactUs;

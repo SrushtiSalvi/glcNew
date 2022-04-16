@@ -1,34 +1,34 @@
-import React, { useEffect, useState } from 'react'
-import { deletePostById, getAllVacancyPosts } from '../api/posts'
+import React, { useEffect, useState } from 'react';
+import { deletePostById, getAllVacancyPosts } from '../api/posts';
 
-import { Link } from 'react-router-dom'
-import NoPosts from '../../web/components/Home/NoPosts'
-import { PostCard } from '../../web/components/shared'
-import { toast } from 'react-toastify'
+import { Link } from 'react-router-dom';
+import NoPosts from '../../web/components/Home/NoPosts';
+import { PostCard } from '../../web/components/shared';
+import { toast } from 'react-toastify';
 
 const VacancyPosts = () => {
-  const [posts, setPosts] = useState([])
-  const [pageNumber, setPageNumber] = useState(1)
-  const [pageSize, setPageSize] = useState(10)
+  const [posts, setPosts] = useState([]);
+  const [pageNumber, setPageNumber] = useState(1);
+  const [pageSize, setPageSize] = useState(10);
   const fetchPosts = async () => {
-    let res = await getAllVacancyPosts(pageNumber, pageSize)
+    let res = await getAllVacancyPosts(pageNumber, pageSize);
     if (res['success']) {
-      setPosts(res['data'] || [])
+      setPosts(res['data'] || []);
     }
-  }
+  };
   useEffect(() => {
-    fetchPosts()
-  }, [pageNumber, pageSize])
+    fetchPosts();
+  }, [pageNumber, pageSize]);
 
-  const deletePost = async (id) => {
-    let res = await deletePostById(id)
+  const deletePost = async id => {
+    let res = await deletePostById(id);
     if (res['success']) {
-      setPosts((posts) => posts.filter((post) => post._id !== id))
-      toast.success(res['message'])
+      setPosts(posts => posts.filter(post => post._id !== id));
+      toast.success(res['message']);
     } else {
-      toast.error(res['message'])
+      toast.error(res['message']);
     }
-  }
+  };
 
   return (
     <div className="flex-grow p-5">
@@ -42,23 +42,16 @@ const VacancyPosts = () => {
         </Link>
       </div>
       {posts && posts.length ? (
-        <div className="post_content_grid">
-          {posts.map((post) => {
-            return (
-              <PostCard
-                isAdmin
-                key={post._id}
-                post={post}
-                deletePost={deletePost}
-              />
-            )
+        <div className="post_content_grid gap-2">
+          {posts.map(post => {
+            return <PostCard isAdmin key={post._id} post={post} deletePost={deletePost} />;
           })}
         </div>
       ) : (
         <NoPosts />
       )}
     </div>
-  )
-}
+  );
+};
 
-export default VacancyPosts
+export default VacancyPosts;

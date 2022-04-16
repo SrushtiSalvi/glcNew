@@ -1,10 +1,10 @@
-import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa'
+import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 
-import { FiMail } from 'react-icons/fi'
-import { IoCallSharp } from 'react-icons/io5'
-import { Link } from 'react-router-dom'
-import React from 'react'
-import logo from '../../assets/img/GLC_logo.png'
+import { FiMail } from 'react-icons/fi';
+import { IoCallSharp } from 'react-icons/io5';
+import { Link } from 'react-router-dom';
+import React from 'react';
+import logo from '../../assets/img/GLC_logo.png';
 
 const Navbar = () => {
   return (
@@ -20,9 +20,7 @@ const Navbar = () => {
           </Link>
           <div className="flex flex-col justify-center font-poppins text-xs sm:text-base md:text-lg font-semibold">
             <h1>Placement Committee</h1>
-            <h1 className="text-navText-blue">
-              Government Law College, Mumbai
-            </h1>
+            <h1 className="text-navText-blue">Government Law College, Mumbai</h1>
           </div>
         </div>
         <div className=" hidden lg:flex flex-row space-x-6 text-lg mr-8 items-center">
@@ -49,7 +47,7 @@ const Navbar = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

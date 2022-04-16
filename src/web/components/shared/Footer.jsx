@@ -1,11 +1,25 @@
-import { ImLocation2 } from 'react-icons/im'
-import { IoCall } from 'react-icons/io5'
-import { Link } from 'react-router-dom'
-import { MdEmail } from 'react-icons/md'
-import MiniFooter from './MiniFooter'
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+
+import { ImLocation2 } from 'react-icons/im';
+import { IoCall } from 'react-icons/io5';
+import { Link } from 'react-router-dom';
+import { MdEmail } from 'react-icons/md';
+import MiniFooter from './MiniFooter';
+import { getContactDetails } from '../../../admin/api/common';
 
 const Footer = () => {
+  const [contactDetails, setContactDetails] = useState({});
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await getContactDetails();
+      if (response['success']) {
+        setContactDetails(response['data']);
+      } else {
+        console.error(response['message']);
+      }
+    };
+    fetchData();
+  }, []);
   return (
     <>
       <div className="bg-primary justify-evenly text-white font-poppins-medium hidden lg:flex">
@@ -95,16 +109,12 @@ const Footer = () => {
           <div className="flex flex-col text-sm space-y-4 my-8">
             <div className="flex flex-row">
               <ImLocation2 className="text-sm m-1 ml-0 mr-2" />
-              <p className="">
-                The Government Law College 'A' Road,
-                <br /> Churchgate, Mumbai - 400020,
-                <br /> Maharashtra, India.
-              </p>
+              <p className="" dangerouslySetInnerHTML={{ __html: contactDetails.address }}></p>
             </div>
             <div className="flex flex-row">
               <IoCall className="text-sm m-1 ml-0 mr-2" />
               <p>
-                Mansi Dhadke (8657156719)
+                {contactDetails.gen_secretary_name} ({contactDetails.gen_secretary_number})
                 <br />
                 General Secretary
               </p>
@@ -112,14 +122,15 @@ const Footer = () => {
             <div className="flex flex-row">
               <IoCall className="text-sm m-1 ml-0 mr-2" />
               <p>
-                Haryashwa Singh Thakore (9921462543)
+                {contactDetails.asst_gen_secretary_name} ({contactDetails.asst_gen_secretary_number}
+                )
                 <br />
-                Assistant General Secretary{' '}
+                Assistant General Secretary
               </p>
             </div>
             <div className="flex flex-row">
               <MdEmail className="text-sm m-1 ml-0 mr-2" />
-              <p>placements.glc@gmail.com</p>
+              <p>{contactDetails.email}</p>
             </div>
           </div>
         </div>
@@ -139,7 +150,7 @@ const Footer = () => {
       </div>
       <MiniFooter />
     </>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
