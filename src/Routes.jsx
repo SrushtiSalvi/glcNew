@@ -10,35 +10,30 @@ import {
   SingleNotice,
   SinglePost,
   StudentsCorner,
-} from './web/pages'
-import { Outlet, Route, Routes } from 'react-router-dom'
+} from './web/pages';
+import { Outlet, Route, Routes } from 'react-router-dom';
 
-import AddEsteemedRecruiter from './admin/pages/AddEsteemedRecruiter'
-import AddNoticePost from './admin/pages/AddNoticePost'
-import AddVacancyPost from './admin/pages/AddVacancyPost'
-import AdminLayout from './admin/shared/AdminLayout'
-import ContactDetails from './admin/pages/ContactDetails'
-import Dashboard from './admin/pages/Dashboard'
-import EditNoticePost from './admin/pages/EditNoticePost'
-import EditVacancyPost from './admin/pages/EditVacancyPost'
-import EsteemedRecruiters from './admin/pages/EsteemedRecruiters'
-import { Layout } from './web/components/shared'
-import { Login } from './admin/pages'
-import NoticePosts from './admin/pages/NoticePosts'
-import PastRecruiters from './admin/pages/PastRecruiters'
-import React from 'react'
-import { ToastContainer } from 'react-toastify'
-import VacancyPosts from './admin/pages/VacancyPosts'
+import AddEsteemedRecruiter from './admin/pages/AddEsteemedRecruiter';
+import AddNoticePost from './admin/pages/AddNoticePost';
+import AddVacancyPost from './admin/pages/AddVacancyPost';
+import AdminLayout from './admin/shared/AdminLayout';
+import ContactDetails from './admin/pages/ContactDetails';
+import Dashboard from './admin/pages/Dashboard';
+import EditNoticePost from './admin/pages/EditNoticePost';
+import EditVacancyPost from './admin/pages/EditVacancyPost';
+import EsteemedRecruiters from './admin/pages/EsteemedRecruiters';
+import { Layout } from './web/components/shared';
+import { Login } from './admin/pages';
+import NoticePosts from './admin/pages/NoticePosts';
+import PastRecruiters from './admin/pages/PastRecruiters';
+import React from 'react';
+import { ToastContainer } from 'react-toastify';
+import VacancyPosts from './admin/pages/VacancyPosts';
 
 const AllRoutes = () => {
   return (
     <>
-      <ToastContainer
-        role="alert"
-        theme={'dark'}
-        newestOnTop
-        position="bottom-right"
-      />
+      <ToastContainer role="alert" theme={'dark'} newestOnTop position="bottom-right" />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/" element={<Layout />}>
@@ -80,7 +75,7 @@ const AllRoutes = () => {
         </Route>
       </Routes>
     </>
-  )
-}
+  );
+};
 
-export default AllRoutes
+export default AllRoutes;

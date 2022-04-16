@@ -1,12 +1,7 @@
-import { BottomBar, Footer } from '../components/shared'
-import {
-  EsteemedRecruiters,
-  HeroSection,
-  NoticeSection,
-  Options,
-} from '../components/Home'
+import { BottomBar, Footer } from '../components/shared';
+import { EsteemedRecruiters, HeroSection, NoticeSection, Options } from '../components/Home';
 
-import React from 'react'
+import React from 'react';
 
 const Home = () => {
   return (
@@ -18,7 +13,7 @@ const Home = () => {
       <BottomBar />
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

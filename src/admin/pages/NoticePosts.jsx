@@ -1,34 +1,34 @@
-import { deleteNoticeById, getAllNotices } from '../api/notices'
-import { useEffect, useState } from 'react'
+import { deleteNoticeById, getAllNotices } from '../api/notices';
+import { useEffect, useState } from 'react';
 
-import { Link } from 'react-router-dom'
-import NoNotices from '../../web/components/Home/NoNotices'
-import Notice from '../../web/components/shared/Notice'
-import { toast } from 'react-toastify'
+import { Link } from 'react-router-dom';
+import NoNotices from '../../web/components/Home/NoNotices';
+import Notice from '../../web/components/shared/Notice';
+import { toast } from 'react-toastify';
 
 const NoticePosts = () => {
-  const [notices, setNotices] = useState([])
-  const [pageNumber, setPageNumber] = useState(1)
-  const [pageSize, setPageSize] = useState(10)
+  const [notices, setNotices] = useState([]);
+  const [pageNumber, setPageNumber] = useState(1);
+  const [pageSize, setPageSize] = useState(10);
   const fetchPosts = async () => {
-    let res = await getAllNotices(pageNumber, pageSize)
+    let res = await getAllNotices(pageNumber, pageSize);
     if (res['success']) {
-      setNotices(res['data'] || [])
+      setNotices(res['data'] || []);
     }
-  }
+  };
   useEffect(() => {
-    fetchPosts()
-  }, [pageNumber, pageSize])
+    fetchPosts();
+  }, [pageNumber, pageSize]);
 
-  const deleteNotice = async (id) => {
-    let res = await deleteNoticeById(id)
+  const deleteNotice = async id => {
+    let res = await deleteNoticeById(id);
     if (res['success']) {
-      setNotices((notices) => notices.filter((notice) => notice._id !== id))
-      toast.success(res['message'])
+      setNotices(notices => notices.filter(notice => notice._id !== id));
+      toast.success(res['message']);
     } else {
-      toast.error(res['message'])
+      toast.error(res['message']);
     }
-  }
+  };
 
   return (
     <div className="flex-grow p-5">
@@ -42,23 +42,16 @@ const NoticePosts = () => {
         </Link>
       </div>
       {notices && notices.length ? (
-        <div className="post_content_grid">
-          {notices.map((notice) => {
-            return (
-              <Notice
-                key={notice._id}
-                notice={notice}
-                isAdmin
-                deleteNotice={deleteNotice}
-              />
-            )
+        <div className="post_content_grid gap-2">
+          {notices.map(notice => {
+            return <Notice key={notice._id} notice={notice} isAdmin deleteNotice={deleteNotice} />;
           })}
         </div>
       ) : (
         <NoNotices />
       )}
     </div>
-  )
-}
+  );
+};
 
-export default NoticePosts
+export default NoticePosts;

@@ -1,45 +1,45 @@
-import React, { useEffect, useState } from 'react'
-import { editNoticesPost, getNoticeById } from '../api/notices'
-import { editVacancyPost, updateImage } from '../api/posts'
-import { useNavigate, useParams } from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import { editNoticesPost, getNoticeById } from '../api/notices';
+import { editVacancyPost, updateImage } from '../api/posts';
+import { useNavigate, useParams } from 'react-router-dom';
 
-import { CKEditor } from '@ckeditor/ckeditor5-react'
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
-import FloatingLabelInput from '../shared/FloatingLabelInput'
-import { getPostById } from '../../web/api/api'
-import { toast } from 'react-toastify'
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import FloatingLabelInput from '../shared/FloatingLabelInput';
+import { getPostById } from '../../web/api/api';
+import { toast } from 'react-toastify';
 
 const EditNoticePost = () => {
-  const { id } = useParams()
-  let navigate = useNavigate()
+  const { id } = useParams();
+  let navigate = useNavigate();
 
-  const [formData, setFormData] = useState({})
-  const [content, setContent] = useState('')
+  const [formData, setFormData] = useState({});
+  const [content, setContent] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await getNoticeById(id)
+      const response = await getNoticeById(id);
       if (response['success']) {
-        setFormData({ ...response.data.post })
-        setContent(response.data.post.content)
+        setFormData({ ...response.data.post });
+        setContent(response.data.post.content);
       }
-    }
-    fetchData()
-  }, [])
+    };
+    fetchData();
+  }, []);
 
-  const handleChange = (event) => {
+  const handleChange = event => {
     setFormData({
       ...formData,
       [event.target.name]: event.target.value,
-    })
-  }
+    });
+  };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    const body = new FormData()
-    body.set('_id', id)
-    body.set('title', formData.title)
-    body.set('content', content)
+  const handleSubmit = async e => {
+    e.preventDefault();
+    const body = new FormData();
+    body.set('_id', id);
+    body.set('title', formData.title);
+    body.set('content', content);
 
     // const imgBody = new FormData()
     // imgBody.set('image', formData.image)
@@ -51,22 +51,19 @@ const EditNoticePost = () => {
     //   toast.error(imgRes['message'])
     // }
 
-    let res = await editNoticesPost(body)
+    let res = await editNoticesPost(body);
     if (res['success']) {
-      toast.success(res['message'])
-      setFormData({})
-      navigate('/admin/notices')
+      toast.success(res['message']);
+      setFormData({});
+      navigate('/admin/notices');
     } else {
-      toast.error(res['message'])
+      toast.error(res['message']);
     }
-  }
+  };
 
   return (
     <div className="p-5 flex-grow">
-      <form
-        className="w-1/2 mx-auto mt-5 shadow-lg p-5"
-        onSubmit={handleSubmit}
-      >
+      <form className="w-1/2 mx-auto mt-5 shadow-lg p-5" onSubmit={handleSubmit}>
         <div className="relative z-0 mb-6 w-full group">
           <FloatingLabelInput
             type="text"
@@ -90,12 +87,12 @@ const EditNoticePost = () => {
           <CKEditor
             editor={ClassicEditor}
             data={content}
-            onReady={(editor) => {
-              console.log('Editor is ready to use!')
+            onReady={editor => {
+              console.log('Editor is ready to use!');
             }}
             onChange={(event, editor) => {
-              const data = editor.getData()
-              setContent(data)
+              const data = editor.getData();
+              setContent(data);
             }}
             // onBlur={(event, editor) => {
             //   console.log('Blur.', editor)
@@ -114,7 +111,7 @@ const EditNoticePost = () => {
         </button>
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default EditNoticePost
+export default EditNoticePost;

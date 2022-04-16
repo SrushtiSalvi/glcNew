@@ -5,6 +5,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa&display=swap');
 
 @layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
   :root {
     --primary-lighter: 0 57 105;
     /* #003969 */

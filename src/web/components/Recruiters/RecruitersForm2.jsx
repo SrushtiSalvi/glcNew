@@ -1,14 +1,11 @@
-import Dropdown from '../StudentsCorner/Dropdown'
-import Options from '../Home/Options'
-import React from 'react'
+import Dropdown from '../StudentsCorner/Dropdown';
+import Options from '../Home/Options';
+import React from 'react';
 
 const Input = ({ label, id, name, required, className, placeholder, type }) => {
   return (
     <div>
-      <label
-        className=" text-sm md:text-base xl:text-lg block px-8 py-2 text-white"
-        htmlFor={id}
-      >
+      <label className=" text-sm md:text-base xl:text-lg block px-8 py-2 text-white" htmlFor={id}>
         {label}
       </label>
       <input
@@ -20,8 +17,8 @@ const Input = ({ label, id, name, required, className, placeholder, type }) => {
         className={`w-full px-8 placeholder:text-gray-300  border-gray-500 border rounded-full bg-neutral-200/20  text-sm md:text-base xl:text-lg  py-3  focus:shadow-md focus:outline-none text-white ${className}`}
       />
     </div>
-  )
-}
+  );
+};
 
 const RecruitersForm2 = () => {
   return (
@@ -132,7 +129,7 @@ const RecruitersForm2 = () => {
         type="text"
       />
     </>
-  )
-}
+  );
+};
 
-export default RecruitersForm2
+export default RecruitersForm2;

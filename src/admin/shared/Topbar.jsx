@@ -1,23 +1,23 @@
-import { HiLogin, HiLogout } from 'react-icons/hi'
-import { Link, useNavigate } from 'react-router-dom'
-import { Menu, Transition } from '@headlessui/react'
-import { useDispatch, useSelector } from 'react-redux'
+import { HiLogin, HiLogout } from 'react-icons/hi';
+import { Link, useNavigate } from 'react-router-dom';
+import { Menu, Transition } from '@headlessui/react';
+import { useDispatch, useSelector } from 'react-redux';
 
-import { BiChevronDown } from 'react-icons/bi'
-import { FaUserCircle } from 'react-icons/fa'
-import React from 'react'
-import { logout } from '../../redux/actions/auth'
-import { toast } from 'react-toastify'
+import { BiChevronDown } from 'react-icons/bi';
+import { FaUserCircle } from 'react-icons/fa';
+import React from 'react';
+import { logout } from '../../redux/actions/auth';
+import { toast } from 'react-toastify';
 
 const Topbar = () => {
-  let isLoggedIn = useSelector((state) => state.isLoggedIn)
-  const dispatch = useDispatch()
-  let navigate = useNavigate()
+  let isLoggedIn = useSelector(state => state.isLoggedIn);
+  const dispatch = useDispatch();
+  let navigate = useNavigate();
   const logoutUser = () => {
-    dispatch(logout())
-    toast.success('Logout successful!')
-    navigate('/admin/login')
-  }
+    dispatch(logout());
+    toast.success('Logout successful!');
+    navigate('/admin/login');
+  };
   return (
     <nav className="flex bg-white shadow-lg justify-between">
       <Link to="/admin/dashboard">
@@ -105,11 +105,7 @@ const Topbar = () => {
                             <Link
                               to="/admin/login"
                               className={`flex items-center px-4 py-2 text-sm
-              ${
-                active
-                  ? 'bg-primary text-white hover:text-white'
-                  : 'text-gray-700'
-              }`}
+              ${active ? 'bg-primary text-white hover:text-white' : 'text-gray-700'}`}
                             >
                               <HiLogin
                                 className={`mr-3 h-5 w-5 
@@ -130,7 +126,7 @@ const Topbar = () => {
         </Menu>
       </article>
     </nav>
-  )
-}
+  );
+};
 
-export default Topbar
+export default Topbar;

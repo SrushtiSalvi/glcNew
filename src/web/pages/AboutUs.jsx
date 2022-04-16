@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
-import { MemberCard } from '../components/AboutUs'
-import image_founder from '../assets/img/founder.jpg'
-import image_incharge from '../assets/img/Prof. S. Gaddapwar.jpeg'
-import image_principal from '../assets/img/Dr. Asmita Vaidya.jpeg'
-import logo from '../assets/img/GLC_logo.png'
-import logo_pc from '../assets/img/pc_logo.png'
+import { MemberCard } from '../components/AboutUs';
+import image_founder from '../assets/img/founder.jpg';
+import image_incharge from '../assets/img/Prof. S. Gaddapwar.jpeg';
+import image_principal from '../assets/img/Dr. Asmita Vaidya.jpeg';
+import logo from '../assets/img/GLC_logo.png';
+import logo_pc from '../assets/img/pc_logo.png';
 
 const AboutUs = () => {
   const [people, setPeople] = useState([
@@ -74,7 +74,7 @@ const AboutUs = () => {
       name: 'Yash Dhikle',
       post: '',
     },
-  ])
+  ]);
   const [secretary, setSecretary] = useState([
     {
       name: 'Mansi Dhadke',
@@ -84,7 +84,7 @@ const AboutUs = () => {
       name: 'Haryashwa Singh Thakore',
       post: 'Asst. General Secretary',
     },
-  ])
+  ]);
   return (
     <>
       <div className=" flex flex-col sm:flex-row m-4 lg:mx-20 lg:my-5 justify-center ">
@@ -101,36 +101,30 @@ const AboutUs = () => {
           </div>
           <div className="  my-2  text-left sm:text-right font-poppins font-normal  text-xs lg:text-base xl:text-xl space-y-5 ">
             <p>
-              Government Law College, Mumbai or GLC, as it is popularly known
-              was established in 1855 and has the distinction of being the
-              oldest Law College in Asia, dating even prior to the University of
-              Mumbai.
+              Government Law College, Mumbai or GLC, as it is popularly known was established in
+              1855 and has the distinction of being the oldest Law College in Asia, dating even
+              prior to the University of Mumbai.
             </p>
 
             <p>
-              Having humbly begun as evening classes in a borrowed premises,
-              this college that first lit the candle of legal education in India
-              stands tall amongst all its contemporaries.
+              Having humbly begun as evening classes in a borrowed premises, this college that first
+              lit the candle of legal education in India stands tall amongst all its contemporaries.
             </p>
 
             <p>
-              It enjoys a pre-eminent reputation for excellence in the field of
-              legal education with a seemingly endless list of eminent alumni
-              like Dr. B. R. Ambedkar, Lokmanya Tilak, Justice M. C. Chagla, Sir
-              Motilal Setalvad (first Attorney General of India), and several
-              others who have adorned benches of the Supreme Court of India and
-              the Bombay High Court and left their footprints behind for time
-              immemorial.
+              It enjoys a pre-eminent reputation for excellence in the field of legal education with
+              a seemingly endless list of eminent alumni like Dr. B. R. Ambedkar, Lokmanya Tilak,
+              Justice M. C. Chagla, Sir Motilal Setalvad (first Attorney General of India), and
+              several others who have adorned benches of the Supreme Court of India and the Bombay
+              High Court and left their footprints behind for time immemorial.
             </p>
 
             <p>
-              GLC remains strong and resolute in these trying times of
-              competitive and commercialized nature of legal education by
-              holding on to its institutional ethos and due to the strength of
-              its rich heritage and professional character, thus fulfilling its
-              objectives of training not just the finest of the legal
-              practitioners but also by nurturing professionals and thinkers in
-              every sphere of society.
+              GLC remains strong and resolute in these trying times of competitive and
+              commercialized nature of legal education by holding on to its institutional ethos and
+              due to the strength of its rich heritage and professional character, thus fulfilling
+              its objectives of training not just the finest of the legal practitioners but also by
+              nurturing professionals and thinkers in every sphere of society.
             </p>
           </div>
         </div>
@@ -145,36 +139,30 @@ const AboutUs = () => {
           </h1>
           <div className="my-2 text-right sm:text-left font-poppins font-normal  text-xs lg:text-base xl:text-xl space-y-5 ">
             <p>
-              Government Law College, Mumbai or GLC, as it is popularly known
-              was established in 1855 and has the distinction of being the
-              oldest Law College in Asia, dating even prior to the University of
-              Mumbai.
+              Government Law College, Mumbai or GLC, as it is popularly known was established in
+              1855 and has the distinction of being the oldest Law College in Asia, dating even
+              prior to the University of Mumbai.
             </p>
 
             <p>
-              Having humbly begun as evening classes in a borrowed premises,
-              this college that first lit the candle of legal education in India
-              stands tall amongst all its contemporaries.
+              Having humbly begun as evening classes in a borrowed premises, this college that first
+              lit the candle of legal education in India stands tall amongst all its contemporaries.
             </p>
 
             <p>
-              It enjoys a pre-eminent reputation for excellence in the field of
-              legal education with a seemingly endless list of eminent alumni
-              like Dr. B. R. Ambedkar, Lokmanya Tilak, Justice M. C. Chagla, Sir
-              Motilal Setalvad (first Attorney General of India), and several
-              others who have adorned benches of the Supreme Court of India and
-              the Bombay High Court and left their footprints behind for time
-              immemorial.
+              It enjoys a pre-eminent reputation for excellence in the field of legal education with
+              a seemingly endless list of eminent alumni like Dr. B. R. Ambedkar, Lokmanya Tilak,
+              Justice M. C. Chagla, Sir Motilal Setalvad (first Attorney General of India), and
+              several others who have adorned benches of the Supreme Court of India and the Bombay
+              High Court and left their footprints behind for time immemorial.
             </p>
 
             <p>
-              GLC remains strong and resolute in these trying times of
-              competitive and commercialized nature of legal education by
-              holding on to its institutional ethos and due to the strength of
-              its rich heritage and professional character, thus fulfilling its
-              objectives of training not just the finest of the legal
-              practitioners but also by nurturing professionals and thinkers in
-              every sphere of society.
+              GLC remains strong and resolute in these trying times of competitive and
+              commercialized nature of legal education by holding on to its institutional ethos and
+              due to the strength of its rich heritage and professional character, thus fulfilling
+              its objectives of training not just the finest of the legal practitioners but also by
+              nurturing professionals and thinkers in every sphere of society.
             </p>
           </div>
         </div>
@@ -198,33 +186,28 @@ const AboutUs = () => {
           </h1>
           <div className=" text-justify text-white sm:p-5  font-light  text-xs sm:text-lg md:text-xl">
             <p>
-              The Placement Committee of Government Law College, Mumbai, is one
-              of the most important committees of the college, shouldering the
-              responsibility of providing a stepping stone to success to budding
-              lawyers graduating from the college.
+              The Placement Committee of Government Law College, Mumbai, is one of the most
+              important committees of the college, shouldering the responsibility of providing a
+              stepping stone to success to budding lawyers graduating from the college.
             </p>
             <p>
-              The committee aims at exhausting all possible opportunities of
-              recruitment with law firms, counsels, LPOs, and corporate houses.
-              It acts as a link between the recruiters and the students, thereby
-              fulfilling the needs of both, and enabling the students to get
-              placements on campus.
+              The committee aims at exhausting all possible opportunities of recruitment with law
+              firms, counsels, LPOs, and corporate houses. It acts as a link between the recruiters
+              and the students, thereby fulfilling the needs of both, and enabling the students to
+              get placements on campus.
             </p>
             <p>
-              The members of the Placement Committee strive hard to ensure that
-              maximum students from the college secure internships and jobs,
-              thus providing them with an opportunity to head start their legal
-              careers. For the last many years, the Placement Committee has been
-              implementing the recruitm ent process throughout the year while
-              also organizing two placement weeks in a year. This widening scope
-              of the committee benefits both the students and the potential
-              employers.
+              The members of the Placement Committee strive hard to ensure that maximum students
+              from the college secure internships and jobs, thus providing them with an opportunity
+              to head start their legal careers. For the last many years, the Placement Committee
+              has been implementing the recruitm ent process throughout the year while also
+              organizing two placement weeks in a year. This widening scope of the committee
+              benefits both the students and the potential employers.
             </p>
             <p>
-              The increasing rate of students getting recruited by the day is a
-              source of inspiration for all students who work zealously for the
-              committee, and encourages them to undertake the tasks of the
-              committee with even greater zeal and enthusiasm.
+              The increasing rate of students getting recruited by the day is a source of
+              inspiration for all students who work zealously for the committee, and encourages them
+              to undertake the tasks of the committee with even greater zeal and enthusiasm.
             </p>
           </div>
         </div>
@@ -273,16 +256,14 @@ const AboutUs = () => {
               post={person.post}
               url={`assets/${person.name.replaceAll(' ', '_')}.jpg`}
             />
-          )
+          );
         })}
       </div>
 
-      <h1 className="font-bold text-3xl text-center my-16">
-        Senior Coordinators{' '}
-      </h1>
+      <h1 className="font-bold text-3xl text-center my-16">Senior Coordinators </h1>
 
       <div className="grid auto-rows-auto grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 place-items-center gap-5 md:px-36 lg:mb-40">
-        {people.map((person) => {
+        {people.map(person => {
           return (
             <MemberCard
               size="sm"
@@ -290,11 +271,11 @@ const AboutUs = () => {
               post={person.post}
               url={`assets/${person.name.replaceAll(' ', '_')}.jpg`}
             />
-          )
+          );
         })}
       </div>
     </>
-  )
-}
+  );
+};
 
-export default AboutUs
+export default AboutUs;

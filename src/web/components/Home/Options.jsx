@@ -1,13 +1,13 @@
-import { BsCalendarEvent } from 'react-icons/bs'
-import { FaHandshake } from 'react-icons/fa'
-import { MdOutlineNoteAlt } from 'react-icons/md'
-import OptionBarItem from './OptionBarItem'
-import React from 'react'
-import { RiContactsFill } from 'react-icons/ri'
-import { useNavigate } from 'react-router'
+import { BsCalendarEvent } from 'react-icons/bs';
+import { FaHandshake } from 'react-icons/fa';
+import { MdOutlineNoteAlt } from 'react-icons/md';
+import OptionBarItem from './OptionBarItem';
+import React from 'react';
+import { RiContactsFill } from 'react-icons/ri';
+import { useNavigate } from 'react-router';
 
 const Options = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
     <div
@@ -35,15 +35,11 @@ const Options = () => {
       >
         <BsCalendarEvent className="w-4 h-4 md:h-10 md:w-10 cursor-pointer group-hover:scale-110 transition-all duration-150" />
       </OptionBarItem>
-      <OptionBarItem
-        className="group"
-        title={`Contact Us`}
-        onClick={() => navigate('/contact-us')}
-      >
+      <OptionBarItem className="group" title={`Contact Us`} onClick={() => navigate('/contact-us')}>
         <RiContactsFill className="w-4 h-4 md:h-10 md:w-10 cursor-pointer group-hover:scale-110 transition-all duration-150" />
       </OptionBarItem>
     </div>
-  )
-}
+  );
+};
 
-export default Options
+export default Options;
