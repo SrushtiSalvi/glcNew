@@ -1,6 +1,6 @@
-import Navbar from './Navbar'
-import React from 'react'
-import logo from '../../assets/img/GLC_logo.png'
+import Navbar from './Navbar';
+import React from 'react';
+import logo from '../../assets/img/GLC_logo.png';
 
 const HeroSection2 = () => {
   return (
@@ -11,7 +11,7 @@ const HeroSection2 = () => {
           <img
             src={logo}
             alt="logo"
-            className="h-auto w-28 xs:w-28 sm:w-28 md:w-32 lg:w-40 xl:w-40 2xl:w-44 3xl:w-48 aspect-square"
+            className="h-auto w-28 xs:w-28 sm:w-28 md:w-32 lg:w-40 xl:w-40 2xl:w-44 3xl:w-48"
           />
           <div className="flex flex-col justify-center">
             <h2 className="text-white font-poppins-medium text-xs xs:text-xs sm:text-sm md:text-base lg:text-2xl xl:text-3xl 2xl:text-2xl 3xl:text-3xl">
@@ -27,7 +27,7 @@ const HeroSection2 = () => {
         </div>
       </main>
     </div>
-  )
-}
+  );
+};
 
-export default HeroSection2
+export default HeroSection2;

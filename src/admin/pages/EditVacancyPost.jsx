@@ -121,7 +121,7 @@ const EditVacancyPost = () => {
           <div>
             <h1>Current Image:</h1>
             <img
-              src={`${process.env.REACT_APP_HOSTNAME}/static/${formData.image_path}`}
+              src={`${import.meta.env.VITE_HOSTNAME}/static/${formData.image_path}`}
               alt={formData.company_name}
               className="h-48 w-48"
             />
