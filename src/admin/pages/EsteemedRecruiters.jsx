@@ -92,7 +92,7 @@ const EsteemedRecruiters = () => {
                   className="flex flex-col items-center justify-center bg-white drop-shadow-lg shadow-lg p-3"
                 >
                   <img
-                    src={`${process.env.REACT_APP_HOSTNAME}/static/${recruiter || ''}`}
+                    src={`${import.meta.env.VITE_HOSTNAME}/static/${recruiter || ''}`}
                     alt=""
                     className="h-16 md:h-20 lg:h-32 w-auto"
                   />

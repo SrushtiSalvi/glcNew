@@ -43,6 +43,8 @@ const PostCard = ({ post, isAdmin, deletePost }) => {
         {isAdmin ? (
           <div className="space-x-4">
             <button
+              type="button"
+              aria-label="Edit"
               className="text-yellow-500 hover:text-yellow-700 transition-all duration-300"
               onClick={() => {
                 navigate(`/admin/vacancy-posts/edit/${post._id}`);
@@ -51,6 +53,8 @@ const PostCard = ({ post, isAdmin, deletePost }) => {
               <AiTwotoneEdit className="w-8 h-8" />
             </button>
             <button
+              type="button"
+              aria-label="Delete"
               className="text-red-500 hover:text-red-700 transition-all duration-300 "
               onClick={() => {
                 deletePost(post._id);
@@ -61,6 +65,7 @@ const PostCard = ({ post, isAdmin, deletePost }) => {
           </div>
         ) : (
           <button
+            type="button"
             onClick={() => navigate(`/post/${post._id}`)}
             className="border border-black hover:bg-primary-dark transition-all duration-300 rounded-md md:px-3 md:py-1 text-xs px-2"
           >

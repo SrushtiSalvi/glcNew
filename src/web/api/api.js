@@ -1,5 +1,5 @@
 import axios from 'axios';
-export const api = `${process.env.REACT_APP_HOSTNAME}/api`;
+export const api = `${import.meta.env.VITE_HOSTNAME}/api`;
 
 export const getAllVacancyPosts = async (pageNumber, pageSize) => {
   try {
