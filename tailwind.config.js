@@ -1,15 +1,14 @@
 function withOpacityValue(variable) {
   return ({ opacityValue }) => {
     if (opacityValue === undefined) {
-      return `rgb(var(${variable}))`
+      return `rgb(var(${variable}))`;
     }
-    return `rgb(var(${variable}) / ${opacityValue})`
-  }
+    return `rgb(var(${variable}) / ${opacityValue})`;
+  };
 }
 
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
-  important: true,
   theme: {
     extend: {
       fontFamily: {
@@ -63,5 +62,9 @@ module.exports = {
       // => @media (min-width: 1440px) { ... }
     },
   },
-  plugins: [require('@tailwindcss/line-clamp'), require('@tailwindcss/forms')],
-}
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+  ],
+};
