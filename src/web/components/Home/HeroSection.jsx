@@ -4,10 +4,10 @@ import logo from '../../assets/img/GLC_logo.png';
 
 const HeroSection2 = () => {
   return (
-    <div className="bg-herosection-lg bg-no-repeat w-full bg-center bg-cover h-64 xs:h-64 sm:h-80 md:h-96 lg:h-120 xl:h-144 2xl:h-144 3xl:h-[45rem]">
+    <div className="bg-herosection-lg bg-no-repeat w-full bg-center bg-cover h-64 xs:h-64 sm:h-80 md:h-96 lg:h-120 xl:h-144 ">
       <Navbar className="text-xs sm:text-sm md:text-base lg:text-lg" />
       <main className="relative h-full flex items-center justify-center">
-        <div className="flex flex-row font-poppins-regular h-full items-center justify-center lg:justify-start">
+        <div className=" flex flex-row font-poppins-regular -mt-40 h-fit justify-center lg:justify-start">
           <img
             src={logo}
             alt="logo"
@@ -20,7 +20,7 @@ const HeroSection2 = () => {
             <h1 className="text-white font-poppins-medium text-sm xs:text-sm sm:text-base md:text-lg lg:text-3xl xl:text-4xl 2xl:text-3xl 3xl:text-4xl">
               Placement Committee
             </h1>
-            <h1 className="text-navText font-aref-ruqaa font-bold text-lg xs:text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl 2xl:text-5xl 3xl:text-6xl">
+            <h1 className="text-accent font-aref-ruqaa font-bold text-lg xs:text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl 2xl:text-5xl 3xl:text-6xl">
               Government Law College, Mumbai
             </h1>
           </div>

@@ -25,7 +25,7 @@ const Footer = () => {
       <div className="bg-primary justify-evenly text-white font-poppins-medium hidden lg:flex">
         <div className="p-8">
           <h1 className="text-lg">Quick Links</h1>
-          <hr className="my-4 w-16 bg-navText-blue" />
+          <hr className="my-4 w-16 bg-accent-blue" />
           <div className="grid grid-cols-1 divide-gray-600 my-6 text-sm">
             <Link to="/recruiters" className="hover:underline my-3">
               Recruitment Process
@@ -53,7 +53,7 @@ const Footer = () => {
         </div>
         <div className="p-8">
           <h1 className="text-lg">Get In Touch</h1>
-          <hr className="my-4 w-16 bg-navText-blue" />
+          <hr className="my-4 w-16 bg-accent-blue" />
 
           <div className="my-8">
             <form method="POST">
@@ -70,14 +70,14 @@ const Footer = () => {
                   name="email"
                   type="email"
                   className="block w-full mt-1 rounded-sm p-2 text-sm bg-primary-light"
-                  placeholder="Email address"
+                  placeholder="Email Address"
                   required
                 />
               </label>
               <label className="block mb-3">
                 <input
-                  name="email"
-                  type="email"
+                  name="subject"
+                  type="text"
                   className="block w-full mt-1 rounded-sm p-2 text-sm bg-primary-light"
                   placeholder="Subject"
                   required
@@ -86,15 +86,16 @@ const Footer = () => {
               <label className="block mb-3">
                 <textarea
                   name="message"
-                  className="block w-full mt-1 rounded-sm p-2 text-sm bg-primary-light"
+                  className="block w-full mt-1 rounded-sm p-2 text-sm bg-primary-light "
                   rows="3"
                   placeholder="Your Query"
+                  maxLength={50}
                 ></textarea>
               </label>
               <div className="mb-4">
                 <button
                   type="submit"
-                  className="px-6 py-1 text-indigo-100 rounded-sm transition-colors duration-150 bg-[#EC595F] focus:shadow-outline hover:bg-navText-blue hover:text-black"
+                  className="px-6 py-1 text-indigo-100 rounded-sm transition-colors duration-150 bg-[#EC595F] focus:shadow-outline hover:bg-accent-blue hover:text-black"
                 >
                   Send
                 </button>
@@ -103,8 +104,8 @@ const Footer = () => {
           </div>
         </div>
         <div className="p-8">
-          <h1 className="text-lg">Contact details</h1>
-          <hr className="my-4 w-16 bg-navText-blue" />
+          <h1 className="text-lg">Contact Details</h1>
+          <hr className="my-4 w-16 bg-accent-blue" />
 
           <div className="flex flex-col text-sm space-y-4 my-8">
             <div className="flex flex-row">
@@ -136,7 +137,7 @@ const Footer = () => {
         </div>
         <div className="p-8">
           <h1 className="text-lg">Map</h1>
-          <hr className="my-4 w-16 bg-navText-blue" />
+          <hr className="my-4 w-16 bg-accent-blue" />
           <div className="my-8">
             <map>
               <iframe

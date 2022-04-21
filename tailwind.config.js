@@ -29,7 +29,7 @@ module.exports = {
           DEFAULT: withOpacityValue('--primary'),
           dark: withOpacityValue('--primary-dark'),
         },
-        navText: '#0BD5D9',
+        accent: '#0BD5D9',
       },
       backgroundImage: {
         'herosection-lg': 'url(web/assets/herosection-lg.svg)',

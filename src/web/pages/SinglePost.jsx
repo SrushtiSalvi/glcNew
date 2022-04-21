@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import CountdownTimer from '../components/SinglePost/CountdownTimer';
 import { getPostById } from '../api/api';
 import { useParams } from 'react-router-dom';
+import default_img from '../assets/img/default_img.png';
 
 const SinglePost = () => {
   const { id } = useParams();
@@ -28,9 +29,13 @@ const SinglePost = () => {
     <div className="sm:m-16 m-6 space-y-4 sm:space-y-6">
       <div className="flex flex-col md:flex-row text-center items-center flex-wrap justify-center">
         <img
-          src={`${import.meta.env.VITE_HOSTNAME}/static/${post.image_path || ''}`}
+          src={`${import.meta.env.VITE_HOSTNAME}/static/${post.image_path}`}
+          onError={e => {
+            e.target.onerror = null;
+            e.target.src = default_img;
+          }}
           alt="company_logo"
-          className="h-16 w-16 sm:h-32 sm:w-32 inline-block"
+          className="h-16 w-16 sm:h-32 sm:w-32 inline-block border-2"
         />
         <div className="md:ml-4 p-2 text-center sm:text-left">
           <h1 className="text-xs sm:text-xl md:text2xl font-bold">{post.company_name}</h1>

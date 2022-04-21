@@ -31,8 +31,8 @@ const EsteemedRecruiters = () => {
 
   return (
     <section className="m-4 my-10">
-      <h1 className="capitalize text-center font-poppins-medium text-3xl my-2">
-        our esteemed recruiters
+      <h1 className="capitalize text-center font-poppins-medium text-xl md:text-2xl lg:text-3xl my-2">
+        Our esteemed recruiters
       </h1>
       <Swiper
         className="py-4"
@@ -44,7 +44,17 @@ const EsteemedRecruiters = () => {
         cubeEffect
         thumbs
         spaceBetween={16}
-        slidesPerView={4}
+        breakpoints={{
+          320: {
+            slidesPerView: 2,
+          },
+          720: {
+            slidesPerView: 3,
+          },
+          1440: {
+            slidesPerView: 4,
+          },
+        }}
       >
         {recruiters.map((recruiter, index) => (
           <SwiperSlide key={index}>

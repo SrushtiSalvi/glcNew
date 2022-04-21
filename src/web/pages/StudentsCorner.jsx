@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
 const StudentsCorner = () => {
   let navigate = useNavigate();
   return (
-    <div className="m-4">
+    <div className="m-8 md:space-y-6">
       <div className="shadow-lg shadow-gray-500 rounded-3xl p-4">
         <div className="border-b-2 border-primary-light flex gap-4 p-4 text-primary-dark">
           <IoBookSharp className="my-auto mx-4 text-2xl md:text-3xl " />
@@ -30,7 +30,7 @@ const StudentsCorner = () => {
           </button>
         </div>
       </div>
-      <div className="p-4 lg:border-b lg:border-primary-dark">
+      <div className="lg:border-b lg:border-primary-dark p-4">
         <div className="border-b-2 border-primary-light flex gap-4 p-4 text-primary-dark">
           <RiFileList3Fill className="text-3xl" />
           <h1 className="text-lg md:text-2xl font-semibold">Rules & Regulations</h1>

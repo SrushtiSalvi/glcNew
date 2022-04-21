@@ -94,7 +94,7 @@ const RecruiterList = () => {
           <div className="text-center">
             <h1
               data-aos="fade-right"
-              className=" block text-base md:text-xl bg-primary-dark rounded-full text-white m-5"
+              className=" block text-xl md:text-2xl bg-primary-dark rounded-full text-white m-5 px-2"
             >
               Goverment Authorities, Tribunals & NGOs
             </h1>
