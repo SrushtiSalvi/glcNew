@@ -1,5 +1,5 @@
-import { IoCall, IoMail } from 'react-icons/io5';
-
+import { IoCall } from 'react-icons/io5';
+import { SiGmail } from 'react-icons/si';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import React from 'react';
 
@@ -29,23 +29,33 @@ const ContactUs = () => {
                 </p>
               </section>
               <section className="flex space-x-3">
-                <IoCall className="text-xl" />
                 <div className="flex-col flex space-y-2">
-                  <span>
-                    <b className="underline">Ms. Mansi Dhadke </b>
-                    <h3>General Secretary</h3>
-                    <p>(+91 8657156719)</p>
-                  </span>
-                  <span>
-                    <b className="underline">Mr. Haryashwa Singh Thakore</b>
-                    <h3>Assistant General Secretary</h3>
-                    <p> (+91 9921462543)</p>
-                  </span>
+                  <a href="tel:+91 8657156719" className="flex space-x-3">
+                    <IoCall className="text-xl" />
+                    <div>
+                      <b className="underline">Ms. Mansi Dhadke </b>
+                      <h3>General Secretary</h3>
+                      <p>(+91 8657156719)</p>
+                    </div>
+                  </a>
+                  <a href="tel:+91 9921462543" className="flex space-x-3">
+                    <IoCall className="text-xl" />
+                    <div>
+                      <b className="underline">Mr. Haryashwa Singh Thakore</b>
+                      <h3>Assistant General Secretary</h3>
+                      <p> (+91 9921462543)</p>
+                    </div>
+                  </a>
                 </div>
               </section>
               <section className="flex space-x-3 ">
-                <IoMail />
-                <h3>placements.glc@gmail.com</h3>
+                <a
+                  className="flex space-x-3"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=placements.glc@gmail.com"
+                >
+                  <SiGmail className="hover:text-accent" />
+                  <h3>placements.glc@gmail.com</h3>
+                </a>
               </section>
             </div>
           </div>

@@ -58,7 +58,7 @@ const NoticeSection = () => {
                     `
               }
             >
-              Placements Notices
+              Placement Notices
             </Tab>
             <Tab
               className={({ selected }) =>

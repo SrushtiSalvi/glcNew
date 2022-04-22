@@ -27,7 +27,7 @@ const Recruiters = () => {
       <h1 className="text-center font-bold text-xl md:text-2xl lg:text-3xl  my-8 font-poppins">
         Recruiters' Registration Form
       </h1>
-      <div className="px-10 lg:px-20 md:mx-10 xl:mx-36 py-10 shadow-lg bg-[#193454] align-center  grid grid-cols-2 gap-5 ">
+      <div className="px-10 lg:px-20 md:mx-10 xl:mx-16 py-10 shadow-lg bg-[#193454] align-center  grid grid-cols-2 gap-5 ">
         {(() => {
           switch (form) {
             case 1:

@@ -4,6 +4,7 @@ import { IoCallSharp } from 'react-icons/io5';
 import { SiGmail } from 'react-icons/si';
 import NavItem from '../shared/NavItem';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = ({ className }) => {
   return (
@@ -38,9 +39,9 @@ const Navbar = ({ className }) => {
           </a>
         </li>
         <li>
-          <a href="tel:+918657156719">
+          <Link to="/contact-us">
             <IoCallSharp className="hover:text-accent" />
-          </a>
+          </Link>
         </li>
         <li>
           <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=placements.glc@gmail.com">

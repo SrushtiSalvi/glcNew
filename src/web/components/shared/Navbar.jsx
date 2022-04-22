@@ -36,9 +36,9 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a href="tel:+918657156719">
+              <Link to="/contact-us">
                 <IoCallSharp className="hover:text-accent" />
-              </a>
+              </Link>
             </li>
             <li>
               <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=placements.glc@gmail.com">
