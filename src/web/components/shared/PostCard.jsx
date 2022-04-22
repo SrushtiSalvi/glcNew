@@ -74,6 +74,68 @@ const PostCard = ({ post, isAdmin, deletePost }) => {
         )}
       </div>
     </div>
+
+    // <div>
+    //   <div
+    //     className="grid grid-rows-5 px-6 md:pt-6 pt-3 rounded-lg shadow-md shadow-gray-400 bg-gradient-to-br from-primary-dark to-primary-lighter text-white hover:-translate-y-2 hover:shadow-xl transition-all duration-300 h-fit"
+    //     data-aos="fade-up"
+    //     data-aos-anchor-placement="top-bottom">
+    //     <section className="flex justify-between mb-3 md:mb-10">
+    //       <p className="md:text-2xl text-xl font-poppins font-medium text-left">
+    //         {post.company_name}
+    //       </p>{' '}
+    //       <button className="rounded-xl border-green-400 border text-green-400 px-2 py-1 text-xs cursor-default">
+    //         {post.status}{' '}
+    //       </button>{' '}
+    //     </section>
+    //     <div className="row-span-3 grid grid-cols-2 text-left border-b items-center">
+    //       <div className="space-y-3">
+    //         <p className="font-semibold">Eligibility:</p>
+    //         <p className="font-semibold">Position:</p>
+    //         <p className="font-semibold">Joining:</p>
+    //         <p className="font-semibold">Deadline:</p>
+    //       </div>
+    //       <div className="space-y-3">
+    //         <span className="line-clamp-2">{post.eligibility}</span>
+    //         <span className="line-clamp-2">{post.position}</span>
+    //         <span className="line-clamp-2">{post.joining}</span>
+    //         <span className="line-clamp-2">{post.deadline}</span>
+    //       </div>
+    //     </div>
+    //     <div className="mt-4 pb-3 md:pb-8 flex justify-between">
+    //       <p className="flex items-center text-gray-400 text-xs w-28">{post.created_at}</p>
+    //       {isAdmin ? (
+    //         <div className="space-x-4">
+    //           <button
+    //             type="button"
+    //             aria-label="Edit"
+    //             className="text-yellow-500 hover:text-yellow-700 transition-all duration-300"
+    //             onClick={() => {
+    //               navigate(`/admin/vacancy-posts/edit/${post._id}`);
+    //             }}>
+    //             <AiTwotoneEdit className="w-8 h-8" />
+    //           </button>
+    //           <button
+    //             type="button"
+    //             aria-label="Delete"
+    //             className="text-red-500 hover:text-red-700 transition-all duration-300"
+    //             onClick={() => {
+    //               deletePost(post._id);
+    //             }}>
+    //             <AiTwotoneDelete className="w-8 h-8" />
+    //           </button>
+    //         </div>
+    //       ) : (
+    //         <button
+    //           type="button"
+    //           onClick={() => navigate(`/post/${post._id}`)}
+    //           className="border border-black hover:bg-primary-dark transition-all duration-300 rounded-md md:px-3 md:py-1 text-xs px-2 ">
+    //           Learn More
+    //         </button>
+    //       )}
+    //     </div>
+    //   </div>
+    // </div>
   );
 };
 

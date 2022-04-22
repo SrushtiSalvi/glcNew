@@ -1,23 +1,19 @@
 import React from 'react';
 
 const sizes = {
-  sm: 'w-28 h-28 md:w-32 md:h-32',
-  md: 'md:w-40 md:h-40 w-38 h-38',
+  sm: 'w-32 h-32 md:w-36 md:h-36',
+  md: 'md:w-48 md:h-48 w-66 h-48',
 };
 
 const MemberCard = ({ post, name, url, size }) => {
   return (
-    <div className="space-y-5">
-      <div className="text-center">
-        <img
-          src={url}
-          className={`rounded-full border-black border-2  inline-block  ${sizes[size]}`}
-          alt="logo"
-        />
+    <div className="bg-gray-50 rounded-lg border border-gray-200 hover:-translate-y-2 hover:shadow-md transition-all duration-150 w-full text-center overflow-hidden">
+      <div className="">
+        <img src={url} className={`inline-block w-60 h-60 `} alt="logo" />
       </div>
-      <div>
-        <h1 className="font-bold text-center  align-middle  text-sm md:text-2xl">{post}</h1>
-        <h2 className=" text-sm md:text-2xl text-center">{name}</h2>
+      <div className="p-2 bg-primary text-white">
+        <h1 className="font-bold text-sm md:text-2xl">{post}</h1>
+        <h2 className=" text-sm md:text-2xl ">{name}</h2>
       </div>
     </div>
   );

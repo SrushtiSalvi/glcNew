@@ -10,24 +10,24 @@ const Recruiters = () => {
     <div>
       <div className="flex flex-col lg:flex-row mt-10  align-text-bottom">
         <div className="flex-1"></div>
-        <div className="flex-1  flex-col font-extrabold text-xl lg:text-2xl text-center  font-poppins  justify-center ">
-          <h1>THE RECRUITMENT PROCESS</h1>
+        <div className="flex-1  flex-col font-extrabold text-xl md:text-2xl lg:text-3xl text-center  font-poppins  justify-center ">
+          <h1>OUR RECRUITMENT PROCESS</h1>
         </div>
         <div className="flex-1 lg:flex lg:justify-end hidden  ">
-          <button className="bg-cyan-400 rounded-3xl flex-wrap text-base md:text-lg font-bold lg:mr-4 px-7">
-            View Recruitment Broucher
+          <button className="bg-primary text-gray-200 rounded-3xl flex-wrap text-base md:text-lg font-bold lg:mr-4 p-3">
+            View Recruitment <br /> Brochure
           </button>
         </div>
       </div>
-      <h1 className=" text-md lg:text-xl font-light my-3 text-center">Placement Committee</h1>
+
       <div className="flex justify-center mx-20">
         <img src={RecruitmentProcess} alt="logo"></img>
       </div>
 
-      <h1 className="text-center font-bold text-xl md:text-2xl lg:text-3xl my-8 font-poppins">
-        Registration Form
+      <h1 className="text-center font-bold text-xl md:text-2xl lg:text-3xl  my-8 font-poppins">
+        Recruiters' Registration Form
       </h1>
-      <div className="px-10 lg:px-20 md:mx-10 xl:mx-36 py-10 shadow-lg bg-[#193454] align-center  grid grid-cols-2 gap-5 ">
+      <div className="px-10 lg:px-20 md:mx-10 xl:mx-16 py-10 shadow-lg bg-[#193454] align-center  grid grid-cols-2 gap-5 ">
         {(() => {
           switch (form) {
             case 1:
@@ -73,7 +73,7 @@ const Recruiters = () => {
         </button>
       </div>
       <div>
-        <h1 className="font-bold text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-poppins text-center mt-10">
+        <h1 className="font-bold text-xl md:text-2xl lg:text-3xl font-poppins text-center mt-10">
           Past Recruiters
         </h1>
         <div className="m-5">
