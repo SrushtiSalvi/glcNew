@@ -261,9 +261,9 @@ const AboutUs = () => {
           })}
         </div>
 
-        <h1 className="font-bold text-3xl text-center my-16">Senior Coordinators </h1>
+        <h1 className="font-bold text-3xl text-center my-16">Senior Coordinators</h1>
 
-        <div className="grid auto-rows-auto grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 place-items-center gap-5 mx-32">
+        <div className="grid auto-rows-auto grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 place-items-center gap-5 w-5/6 mx-auto">
           {people.map(person => {
             return (
               <MemberCard
