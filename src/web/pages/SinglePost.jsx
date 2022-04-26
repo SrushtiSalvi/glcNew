@@ -27,22 +27,23 @@ const SinglePost = () => {
 
   return (
     <div className="sm:m-16 m-6 space-y-4 sm:space-y-6">
-      <div className="flex flex-col md:flex-row text-center items-center flex-wrap justify-center">
-        <img
-          src={`${import.meta.env.VITE_HOSTNAME}/static/${post.image_path}`}
-          onError={e => {
-            e.target.onerror = null;
-            e.target.src = default_img;
-          }}
-          alt="company_logo"
-          className="h-16 w-16 sm:h-32 sm:w-32 inline-block border-2"
-        />
-        <div className="md:ml-4 p-2 text-center sm:text-left">
-          <h1 className="text-xs sm:text-xl md:text2xl font-bold">{post.company_name}</h1>
-          <p className="text-xs sm:text-lg">{post.location}</p>
-          <p className="text-xs sm:text-lg text-[#066173]">{post.joining}</p>
+      <div className="flex flex-col md:flex-row text-center items-center justify-center space-x-28">
+        <div className="flex flex-row items-center">
+          <img
+            src={`${import.meta.env.VITE_HOSTNAME}/static/${post.image_path}`}
+            onError={e => {
+              e.target.onerror = null;
+              e.target.src = default_img;
+            }}
+            alt="company_logo"
+            className="h-16 w-16 sm:h-32 sm:w-32 inline-block border-2"
+          />
+          <div className="md:ml-4 p-2 text-center sm:text-left">
+            <h1 className="text-xs sm:text-xl md:text-3xl font-bold">{post.company_name}</h1>
+            <p className="text-xs sm:text-lg">{post.location}</p>
+          </div>
         </div>
-        <div className=" flex flex-col text-center p-2 h-full justify-end ">
+        <div className=" flex flex-col text-center p-2 h-full md:justify-end justify-center">
           <span className="text-xxs sm:text-sm">Time Remaining</span>
           <time className="text-red-600 font-bold text-sm sm:text-xl">
             {/* {post.deadline} */}
@@ -53,16 +54,16 @@ const SinglePost = () => {
 
       <div className="shadow-md grid md:grid-cols-4 grid-cols-2 gap-4 p-2 text-center">
         <div>
-          <p className="text-gray-600 text-xxs sm:text-xs md:text-sm xl:text-lg">Experience</p>
-          <span className="text-xxs sm:text-xs md:text-sm xl:text-lg">{post.experience}</span>
+          <p className="text-gray-600 text-xxs sm:text-xs md:text-sm xl:text-lg">Position </p>
+          <span className="text-xxs sm:text-xs md:text-sm xl:text-lg">{post.position}</span>
         </div>
         <div>
           <p className="text-gray-600 text-xxs sm:text-xs md:text-sm xl:text-lg">Eligibility</p>
           <span className="text-xxs sm:text-xs md:text-sm xl:text-lg">{post.eligibility}</span>
         </div>
         <div>
-          <p className="text-gray-600 text-xxs sm:text-xs md:text-sm xl:text-lg">Position </p>
-          <span className="text-xxs sm:text-xs md:text-sm xl:text-lg">{post.position}</span>
+          <p className="text-gray-600 text-xxs sm:text-xs md:text-sm xl:text-lg">Joining</p>
+          <span className="text-xxs sm:text-xs md:text-sm xl:text-lg">{post.joining}</span>
         </div>
         <div>
           <p className="text-gray-600 text-xxs sm:text-xs md:text-sm xl:text-lg">Status</p>

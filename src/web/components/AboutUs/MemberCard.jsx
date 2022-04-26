@@ -9,7 +9,7 @@ const MemberCard = ({ post, name, url, size }) => {
   return (
     <div className="bg-gray-50 rounded-lg border border-gray-200 hover:-translate-y-2 hover:shadow-md transition-all duration-150 w-full text-center overflow-hidden">
       <div className="">
-        <img src={url} className={`inline-block w-60 h-60 `} alt="logo" />
+        <img loading="lazy" src={url} className={`inline-block w-60 h-60 `} alt="logo" />
       </div>
       <div className="p-2 bg-primary text-white">
         <h1 className="font-bold text-sm md:text-2xl">{post}</h1>

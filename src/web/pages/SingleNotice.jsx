@@ -25,7 +25,7 @@ const SingleNotice = () => {
         {notice.title}
       </h1>
       <div>
-        <img src={image} alt="img" className="" />
+        <img loading="lazy" src={image} alt="img" className="" />
       </div>
       <section className="w-full text-sm md:text-lg p-5">
         <p dangerouslySetInnerHTML={{ __html: notice.content }}></p>

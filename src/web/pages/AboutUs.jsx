@@ -92,7 +92,7 @@ const AboutUs = () => {
         <div className="flex flex-col  justify-end sm:m-3 md:m-8">
           <div className="flex  justify-start sm:justify-end">
             <div className="bg-gradient-to-r from-blue-600 to-blue-900 lg:w-36 lg:h-36 w-20 h-20 rounded-full p-4 align-middle ">
-              <img src={logo} alt="logo" />
+              <img src={logo} alt="logo" loading="lazy" />
             </div>
           </div>
           <div className="flex justify-start sm:justify-end">
@@ -132,7 +132,7 @@ const AboutUs = () => {
         <div className="flex flex-col  justify-end sm:m-3 md:m-8">
           <div className="flex  justify-end sm:justify-start">
             <div className="border border-black w-20 h-20 lg:w-36 lg:h-36 rounded-full p-2 align-middle ">
-              <img className="w-full h-auto" src={logo_pc} alt="logo" />
+              <img className="w-full h-auto" src={logo_pc} alt="logo" loading="lazy" />
             </div>
           </div>
           <h1 className="font-bold font-poppins text-lg  lg:text-2xl xl:text-3xl mt-6 lg:mt-12 xl:mt-12 mb-2 sm:mb-5 text-right sm:text-left">
@@ -169,8 +169,11 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 font-poppins bg-primary-dark my-5 p-2 sm:p-8">
-        <div className=" flex-col sm:flex-1 flex justify-center items-center ">
+      <div className="md:grid-cols-3 grid-rows-3 font-poppins bg-primary-dark md:my-5 p-2 sm:p-8">
+        <h1 className="text-center font-bold text-xl sm:text-2xl md:text-3xl text-white m-4 sm:my-10 underline decoration-2 underline-offset-[20px] pb-5">
+          Founder's Message
+        </h1>
+        <div className=" flex-col flex justify-center items-center ">
           <img
             className="w-36 h-36 sm:w-48 sm:h-48 lg:w-72 lg:h-72 rounded-full"
             src={image_founder}
@@ -181,11 +184,8 @@ const AboutUs = () => {
           </h1>
         </div>
 
-        <div className="sm:flex-1 mr-25 p-2 col-span-2">
-          <h1 className="text-center font-bold text-xl sm:text-2xl md:text-3xl text-white m-4 sm:m-6 underline decoration-2 underline-offset-[20px] pb-5">
-            Founder's Message
-          </h1>
-          <div className=" text-justify text-white sm:p-5  font-light  text-xs sm:text-base font-poppins-regular mx-10 space-y-5">
+        <div className="sm:flex-1 md:mr-25 p-2 col-span-2">
+          <div className=" text-justify text-white sm:p-5  font-light  text-xs sm:text-base font-poppins-regular md:mx-10 space-y-5">
             <p>
               The Placement Committee of Government Law College, Mumbai, is one of the most
               important committees of the college, shouldering the responsibility of providing a
@@ -230,7 +230,7 @@ const AboutUs = () => {
             className="rounded-full border-black border-2 w-48 h-48 my-8 "
             alt="logo"
           />
-          <h1 className="font-bold text-center text-2xl">Prof InCharge</h1>
+          <h1 className="font-bold text-center text-2xl">Founder & Prof InCharge</h1>
           <h2 className="text-2xl text-center">Prof. H. D. Pithawalla</h2>
         </div>
         <div className="flex flex-col items-center">

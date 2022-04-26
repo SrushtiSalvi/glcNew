@@ -7,7 +7,7 @@ import { getAllVacancyPosts } from '../../admin/api/posts';
 const AllPosts = () => {
   const [posts, setPosts] = useState([]);
   const [pageNumber, setPageNumber] = useState(1);
-  const [pageSize, setPageSize] = useState(6);
+  const [pageSize, setPageSize] = useState(8);
   const fetchPosts = async () => {
     let res = await getAllVacancyPosts(pageNumber, pageSize);
     if (res['success']) {

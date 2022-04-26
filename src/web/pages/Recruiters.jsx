@@ -21,13 +21,13 @@ const Recruiters = () => {
       </div>
 
       <div className="flex justify-center mx-20">
-        <img src={RecruitmentProcess} alt="logo"></img>
+        <img loading="lazy" src={RecruitmentProcess} alt="logo"></img>
       </div>
 
       <h1 className="text-center font-bold text-xl md:text-2xl lg:text-3xl  my-8 font-poppins">
         Recruiters' Registration Form
       </h1>
-      <div className="px-10 lg:px-20 md:mx-10 xl:mx-16 py-10 shadow-lg bg-[#193454] align-center  grid grid-cols-2 gap-5 ">
+      <div className="px-10 lg:px-20 md:mx-10 xl:mx-16 py-10 shadow-lg bg-[#193454] align-center   ">
         {(() => {
           switch (form) {
             case 1:
@@ -39,9 +39,9 @@ const Recruiters = () => {
               return <RecruitersForm1 />;
           }
         })()}
-        <div className="flex col-span-2 justify-center gap-5">
+        <div className="flex col-span-2 justify-center gap-5 mt-10">
           <button
-            className={`bg-cyan-500  hover:text-white font-normal text-lg font-serif py-2 px-12 mt-20 rounded-3xl ${
+            className={`bg-cyan-500  hover:text-white font-normal text-lg font-serif py-2 px-12  rounded-3xl ${
               form === 1 ? 'hidden' : 'block'
             }`}
             onClick={() => setForm(1)}
@@ -49,7 +49,7 @@ const Recruiters = () => {
             PREVIOUS
           </button>
           <button
-            className={`bg-cyan-500  hover:text-white font-normal text-lg font-serif py-2 px-12 mt-20 rounded-3xl ${
+            className={`bg-cyan-500  hover:text-white font-normal text-lg font-serif py-2 px-12 rounded-3xl ${
               form === 2 ? 'hidden' : 'block'
             }`}
             onClick={() => setForm(2)}
@@ -57,7 +57,7 @@ const Recruiters = () => {
             NEXT
           </button>
           <button
-            className={`bg-cyan-500  hover:text-white font-normal text-lg font-serif py-2 px-12 mt-20 rounded-3xl uppercase ${
+            className={`bg-cyan-500  hover:text-white font-normal text-lg font-serif py-2 px-12 rounded-3xl uppercase ${
               form === 2 ? 'block' : 'hidden'
             }`}
             onClick={() => setForm(2)}

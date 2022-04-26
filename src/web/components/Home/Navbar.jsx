@@ -29,12 +29,15 @@ const Navbar = ({ className }) => {
       </ul>
       <ul className=" relative xl:flex flex-row space-x-6 items-center text-white hidden justify-end pr-10">
         <li>
-          <a href="https://www.facebook.com/groups/placements.glc/">
+          <a target="_blank" href="https://www.facebook.com/groups/placements.glc/">
             <FaFacebookF className="hover:text-accent" />
           </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/placement-committee-government-law-college-mumbai-245357206/">
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/placement-committee-government-law-college-mumbai-245357206/"
+          >
             <FaLinkedinIn className="hover:text-accent" />
           </a>
         </li>
@@ -44,7 +47,10 @@ const Navbar = ({ className }) => {
           </Link>
         </li>
         <li>
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=placements.glc@gmail.com">
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=placements.glc@gmail.com"
+            target="_blank"
+          >
             <SiGmail className="hover:text-accent" />
           </a>
         </li>

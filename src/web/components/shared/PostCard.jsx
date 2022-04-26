@@ -13,7 +13,9 @@ const PostCard = ({ post, isAdmin, deletePost }) => {
       data-aos-anchor-placement="top-bottom"
     >
       <section className="flex justify-between mb-3 md:mb-10">
-        <p className="md:text-2xl text-xl font-poppins font-medium">{post.company_name}</p>
+        <p className="md:text-2xl text-xl font-poppins font-medium text-left">
+          {post.company_name}
+        </p>
         <button className="rounded-xl border-green-400 border text-green-400 px-2 py-1 text-xs cursor-default h-full">
           {post.status}
         </button>

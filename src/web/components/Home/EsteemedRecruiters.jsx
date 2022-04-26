@@ -29,15 +29,16 @@ const EsteemedRecruiters = () => {
     fetchData();
   }, [pageNumber, pageSize]);
 
-  return (
-    <section className="m-4 my-10">
-      <h1 className="capitalize text-center font-poppins-medium text-xl md:text-2xl lg:text-3xl my-2">
+  return recruiters.length > 0 ? (
+    <section className="m-4 my-15 p-4">
+      <h1 className="capitalize text-center font-poppins-medium text-xl md:text-2xl lg:text-3xl my-8">
         Our esteemed recruiters
       </h1>
       <Swiper
         className="py-4"
         modules={[Keyboard, A11y, Autoplay, Pagination]}
         autoplay
+        speed={50}
         keyboard
         a11y
         loop
@@ -57,7 +58,7 @@ const EsteemedRecruiters = () => {
         }}
       >
         {recruiters.map((recruiter, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} className="py-4 ">
             <div className="flex flex-col items-center justify-center bg-white drop-shadow-lg shadow-lg p-3">
               <img
                 src={`${import.meta.env.VITE_HOSTNAME}/static/${recruiter || ''}`}
@@ -68,7 +69,7 @@ const EsteemedRecruiters = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="flex justify-end w-full">
+      <div className="flex justify-end w-full my-5">
         <Link to={`/recruiters`}>
           <button className="px-3 py-2 shadow-lg border border-gray-100 mt-5 hover:bg-gray-500 hover:text-white transition-all duration-150 text-black rounded-md">
             Show more
@@ -76,6 +77,8 @@ const EsteemedRecruiters = () => {
         </Link>
       </div>
     </section>
+  ) : (
+    ''
   );
 };
 
