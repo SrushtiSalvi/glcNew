@@ -13,7 +13,12 @@ const FlagshipTiles = ({ title, centerTile, position, eligibility, img, classNam
       } ${className}`}
     >
       <FrontSide className="flex text-white rounded-md text-center justify-center items-center">
-        <img src={img} alt="logo" className="absolute h-full w-full -z-10 rounded-md" />
+        <img
+          loading="lazy"
+          src={img}
+          alt="logo"
+          className="absolute h-full w-full -z-10 rounded-md"
+        />
         <p
           className={` font-medium ${centerTile ? 'text-xl md:text-4xl ' : 'text-lg md:text-3xl'}`}
         >

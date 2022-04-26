@@ -1,47 +1,50 @@
-import Dropdown from '../StudentsCorner/Dropdown';
-import Options from '../Home/Options';
-import React from 'react';
+import React, { useState } from 'react';
+import Input from './Input';
 
-const Input = ({ label, id, name, required, className, placeholder, type }) => {
-  return (
-    <div>
-      <label className=" text-sm md:text-base xl:text-lg block px-8 py-2 text-white" htmlFor={id}>
-        {label}
-      </label>
-      <input
-        id={id}
-        type={type}
-        name={name}
-        required={required}
-        placeholder={placeholder}
-        className={`w-full px-8 placeholder:text-gray-300  border-gray-500 border rounded-full bg-neutral-200/20  text-sm md:text-base xl:text-lg  py-3  focus:shadow-md focus:outline-none text-white ${className}`}
-      />
-    </div>
-  );
-};
+const RecruitersFormNew2 = () => {
+  const [position, setPosition] = useState();
+  const [joining, setJoining] = useState();
+  const [eligibility, setEligibility] = useState();
+  const [duration, setDuration] = useState();
+  const [stipend, setStipend] = useState();
+  const [team, setTeam] = useState();
+  const [jobDesc, setJobDesc] = useState();
+  const [requirements, setRequirements] = useState();
+  const [relevantDetails, setRelevantDetails] = useState();
 
-const RecruitersForm2 = () => {
   return (
-    <>
-      <Input
-        id="position"
-        name="position"
-        label="Position"
-        required="true"
-        placeholder="Enter Position"
-        type="text"
-      />
-      <Input
-        id="joiningDate"
-        name="joiningDate"
-        label="Joining Date"
-        required="true"
-        placeholder="Enter Joining Date"
-        type="date"
-      />
-      <div className="col-span-2 place-content-center">
+    <form className="grid gap-8">
+      <div className="col-span-2 md:col-span-1">
+        <Input
+          id="position"
+          name="position"
+          label="Position"
+          required
+          placeholder=" "
+          type="text"
+          value={position}
+          onChange={() => {
+            setPosition;
+          }}
+        />
+      </div>
+      <div className="col-span-2 md:col-span-1">
+        <Input
+          id="joiningDate"
+          name="joiningDate"
+          label="Joining Date"
+          required
+          placeholder=" "
+          type="text"
+          value={joining}
+          onChange={() => {
+            setJoining;
+          }}
+        />
+      </div>
+      <div className="col-span-2">
         <label
-          className=" text-sm md:text-base xl:text-lg block px-8 py-2 text-white"
+          className=" text-sm md:text-base xl:text-lg block px-4 text-white"
           htmlFor="eligibility"
         >
           Eligibility
@@ -61,75 +64,103 @@ const RecruitersForm2 = () => {
           <option value="Past Graduates">Past Graduates</option>
         </select>
       </div>
-      <Input
-        id="duration"
-        name="duration"
-        label="Duration"
-        required="true"
-        placeholder="Duration/Prohibition Period"
-        type="text"
-      />
+      <div className="col-span-2 md:col-span-1">
+        <Input
+          id="duration"
+          name="duration"
+          label="Duration/Probation Period"
+          required
+          placeholder=" "
+          type="text"
+          value={duration}
+          onChange={() => {
+            setDuration;
+          }}
+        />
+      </div>
       <div>
-        <label
-          className=" text-sm md:text-base xl:text-lg block px-8 py-2 text-white"
-          htmlFor="eligibility"
-        >
-          Work Mode
-        </label>
         <select
-          name="eligibility"
-          id="eligibility"
-          className={`w-full px-8 placeholder:text-gray-300  border-gray-500 border rounded-full bg-neutral-200/20  text-sm md:text-base xl:text-lg  py-3  focus:shadow-md focus:outline-none text-white `}
+          name="workMype"
+          id="workMode"
+          className={`w-full px-8 placeholder:text-gray-300  border-gray-500 border rounded-full bg-neutral-200/20  text-sm md:text-base xl:text-lg  py-3  focus:shadow-md focus:outline-none text-white mt-2`}
         >
           <option value="Work from home">Work From Home</option>
           <option value="Physical">Physical</option>
         </select>
       </div>
-      <Input
-        id="stipend"
-        name="stipend"
-        label="Stipend"
-        required="true"
-        placeholder="Stipend (if applicable) / Remuneration"
-        type="text"
-      />
-      <Input
-        id="team"
-        name="team"
-        label="Team / Department"
-        required="true"
-        placeholder="Team / Department"
-        type="text"
-      />
-      <div className="col-span-2 place-content-center">
+      <div className="col-span-2 md:col-span-1">
+        <Input
+          id="stipend"
+          name="stipend"
+          label="Stipend (if applicable) / Remuneration"
+          required
+          placeholder=" "
+          type="text"
+          value={stipend}
+          onChange={() => {
+            setStipend;
+          }}
+        />
+      </div>
+      <div className="col-span-2 md:col-span-1">
+        <Input
+          id="team"
+          name="team"
+          label="Team / Department"
+          required
+          placeholder=" "
+          type="text"
+          value={team}
+          onChange={() => {
+            setTeam;
+          }}
+        />
+      </div>
+      <div className="col-span-2">
         <Input
           id="Job_description"
           name="jobDescription"
-          label="Job Description"
-          required="true"
-          placeholder="Job Description (Please email the JD if it’s in a file format)                                                  "
+          label="Job Description (Please email the JD if it’s in a file format)"
+          required
+          placeholder="Job Description                                                   "
           type="file"
           className="file:bg-neutral-200/20  file:border-0 file:mr-4 file:rounded-xl file:shadow-none file:text-white"
+          value={jobDesc}
+          onChange={() => {
+            setJobDesc;
+          }}
         />
       </div>
-      <Input
-        id="candidateRequirements"
-        name="candidateRequirements"
-        label="Candidate Requirements"
-        required="true"
-        placeholder="Candidate Requirements (If any)"
-        type="text"
-      />
-      <Input
-        id="otherRelevantDetails"
-        name="otherRelevantDetails"
-        label="Other Relevant Details"
-        required="true"
-        placeholder="Other Relevant Details (If any)"
-        type="text"
-      />
-    </>
+      <div className="col-span-2 md:col-span-1">
+        <Input
+          id="candidateRequirements"
+          name="candidateRequirements"
+          label="Candidate Requirements (If any)"
+          required
+          placeholder=" "
+          type="text"
+          value={requirements}
+          onChange={() => {
+            setRequirements;
+          }}
+        />
+      </div>
+      <div className="col-span-2 md:col-span-1">
+        <Input
+          id="otherRelevantDetails"
+          name="otherRelevantDetails"
+          label="Other Relevant Details (If any)"
+          required
+          placeholder=" "
+          type="text"
+          value={relevantDetails}
+          onChange={() => {
+            setRelevantDetails;
+          }}
+        />
+      </div>
+    </form>
   );
 };
 
-export default RecruitersForm2;
+export default RecruitersFormNew2;

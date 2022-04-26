@@ -1,123 +1,131 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Input from './Input';
 
-const TextInput = ({ label, id, name, required, className, placeholder }) => {
+const RecruitersFormNew1 = () => {
+  const [firmName, setFirmName] = useState();
+  const [presonInCharge, setPresonInCharge] = useState();
+  const [contactNumber, setContactNumber] = useState();
+  const [email, setEmail] = useState();
+  const [website, setWebsite] = useState();
+  const [officeAddress, setOfficeAddress] = useState();
+  const [description, setDescription] = useState();
+  const [areaOfPractice, setAreaOfPractice] = useState();
   return (
-    <div>
-      <label className=" text-sm md:text-base xl:text-lg block px-8 py-2 text-white" htmlFor={id}>
-        {label}
-      </label>
-      <input
-        id={id}
-        text="text"
-        name={name}
-        required={required}
-        placeholder={placeholder}
-        className={`${className} w-full px-8 placeholder:text-gray-300  border-gray-500 border rounded-full bg-[#e5e5e53b]  text-sm md:text-base xl:text-lg  py-3  focus:shadow-md focus:outline-none text-white`}
-      />
-    </div>
-  );
-};
-const IntInput = ({ label, id, contact, required, className, placeholder }) => {
-  return (
-    <div>
-      <label className="text-sm md:text-base xl:text-lg block px-8 py-2 text-white" htmlFor={id}>
-        {label}
-      </label>
-      <input
-        id={id}
-        type="tel"
-        contact={contact}
-        required={required}
-        placeholder={placeholder}
-        className={`${className} w-full px-8 placeholder:text-gray-300  border-gray-500 border rounded-full bg-[#e5e5e53b]  text-sm md:text-base xl:text-lg  py-3  focus:shadow-md focus:outline-none text-white`}
-      />
-    </div>
-  );
-};
-
-const RecruitersForm1 = () => {
-  return (
-    <>
-      {/* <div className="px-10 lg:px-20 md:mx-10 xl:mx-36 py-10 shadow-lg bg-[#193454] align-center space-y-8  grid grid-cols-2 "> */}
-      <div className="place-content-center col-span-2">
-        <TextInput
+    <form className="grid gap-8">
+      <div className="col-span-2">
+        <Input
           id="firmName"
           name="firmName"
-          label="Name of Law Firm"
-          required="true"
-          placeholder="Enter Name of Law Firm/Company/Counsel/etc."
+          type="text"
+          label="Name of Law Firm/Company/Counsel/etc."
+          value={firmName}
+          onChange={() => {
+            setFirmName;
+          }}
+          required
+          placeholder=" "
         />
       </div>
-      <div className="place-content-center col-span-2 md:col-span-1">
-        <TextInput
+      <div className="col-span-2 md:col-span-1">
+        <Input
           id="personIncharge"
           name="personIncharge"
-          label="Name of Person-in-Charge"
-          required="true"
-          placeholder="Enter Name of Person-in-Charge"
+          type="text"
+          label="Name of the Person-in-Charge"
+          required
+          value={presonInCharge}
+          onChange={() => {
+            setPresonInCharge;
+          }}
+          placeholder=" "
         />
       </div>
-      <div className=" place-content-center col-span-2 md:col-span-1 ml-2">
-        <IntInput
+      <div className=" col-span-2 md:col-span-1 ml-2">
+        <Input
           id="contactNumber"
           contact="contactNumber"
+          type="tel"
           label="Contact Number"
-          required="true"
-          placeholder="Enter your Contact Number"
+          required
+          value={contactNumber}
+          onChange={() => {
+            setContactNumber;
+          }}
+          placeholder=" "
         />
       </div>
-      <div className=" place-content-center col-span-2 md:col-span-1">
-        <label
-          className="text-sm md:text-base xl:text-lg block px-8 py-2 text-white"
-          htmlFor="name"
-        >
-          Email Address
-        </label>
-        <input
+      <div className="col-span-2 md:col-span-1">
+        <Input
           id="email"
           type="email"
+          name="email"
+          label="Email Address"
           required
-          placeholder="Enter your Email Address"
-          className="w-full px-8 placeholder:text-gray-300  border-gray-500 border rounded-full bg-[#e5e5e53b]  text-sm md:text-base xl:text-lg  py-3  focus:shadow-md focus:outline-none text-white"
+          value={email}
+          onChange={() => {
+            setEmail;
+          }}
+          placeholder=" "
         />
       </div>
-      <div className=" place-content-center col-span-2 md:col-span-1 ml-2">
-        <label
-          className="text-sm md:text-base xl:text-lg block px-8 py-2 text-white"
-          htmlFor="name"
-        >
-          Website/LinkedIn
-        </label>
-        <input
+      <div className="col-span-2 md:col-span-1">
+        <Input
           id="website"
+          name="address"
+          label="Website/LinkedIn"
           type="url"
           required
-          placeholder="Enter Website url"
-          className="w-full px-8 placeholder:text-gray-300  border-gray-500 border rounded-full bg-[#e5e5e53b]  text-sm md:text-base xl:text-lg  py-3  focus:shadow-md focus:outline-none text-white"
+          value={website}
+          onChange={() => {
+            setWebsite;
+          }}
+          placeholder=" "
         />
       </div>
-      <div className=" place-content-center col-span-2">
-        <TextInput
+      <div className=" col-span-2">
+        <Input
           id="address"
           name="address"
+          type="text"
           label="Office Address"
-          required="true"
-          placeholder="Enter Office Address"
+          required
+          value={officeAddress}
+          onChange={() => {
+            setOfficeAddress;
+          }}
+          placeholder=" "
         />
       </div>
-      <div className=" place-content-center col-span-2 ">
-        <TextInput
+      <div className=" col-span-2 ">
+        <Input
           id="recruiterDetails"
           name="recruiterDetails"
-          label="Recruiter's Description & Area of Practice"
-          required="true"
-          placeholder="Enter Recruiter's Description"
+          type="text"
+          label="Recruiter's Description"
+          required
+          value={description}
+          onChange={() => {
+            setDescription;
+          }}
+          placeholder=" "
         />
       </div>
-
-      {/* </div> */}
-    </>
+      <div className=" col-span-2 ">
+        <Input
+          id="AreaOfPractice"
+          name="AreaOfPractice"
+          type="text"
+          label="Area of Practice"
+          required
+          value={areaOfPractice}
+          onChange={() => {
+            setAreaOfPractice;
+          }}
+          placeholder=" "
+        />
+      </div>
+    </form>
   );
 };
 
-export default RecruitersForm1;
+export default RecruitersFormNew1;

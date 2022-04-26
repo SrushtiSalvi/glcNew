@@ -12,7 +12,7 @@ const Notice = ({ notice, deleteNotice, isAdmin }) => {
         isAdmin ? '' : 'hover:-translate-y-2 transition-all duration-150'
       } `}
     >
-      <img src={image} alt="img" className="" />
+      <img loading="lazy" src={image} alt="img" className="" />
       <div className="p-3 flex-grow">
         <h1 className="font-poppins-medium">{notice.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: notice.content }} className="line-clamp-6"></div>

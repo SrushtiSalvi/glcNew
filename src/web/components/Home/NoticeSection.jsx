@@ -1,14 +1,17 @@
 import React, { Fragment, useState } from 'react';
 import { getAllNoticePosts, getAllVacancyPosts } from '../../api/api';
+import sampleCV from '../../assets/pdfs/sample.pdf';
 
 import { Link } from 'react-router-dom';
 import NoNotices from './NoNotices';
 import NoPosts from './NoPosts';
+import NoDownloads from './NoDownloads';
 import { PostCard } from '../shared';
 import { Tab } from '@headlessui/react';
 import samplePDF from '../../assets/pdfs/sample.pdf';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { IoDownloadSharp } from 'react-icons/io5';
 
 const NoticeSection = () => {
   const navigate = useNavigate();
@@ -16,7 +19,13 @@ const NoticeSection = () => {
   const [hasPrevious, setHasPrevious] = useState(true);
 
   const [posts, setPosts] = useState([]);
-  const [notices, setNotices] = useState([1, 2]);
+  const [notices, setNotices] = useState([]);
+  const [downloads, setDownloads] = useState([
+    {
+      title: 'sample cv',
+      link: sampleCV,
+    },
+  ]);
 
   const [pageNumber, setPageNumber] = useState(1);
   const [pageSize, setPageSize] = useState(10);
@@ -103,10 +112,10 @@ const NoticeSection = () => {
             </Tab.Panel>
 
             <Tab.Panel>
-              {notices.length > 0 ? (
-                <div className="grid md:grid-cols-2 gap-4 md:gap-8 md:w-3/4 mx-auto">
-                  <div className="flex flex-col justify-between h-full">
-                    <h1 className="bg-accent md:p-2 text-white font-bold">Notice Board</h1>
+              <div className="grid md:grid-cols-2 gap-4 md:gap-8 md:w-3/4 mx-auto">
+                <div className="flex flex-col justify-between h-full">
+                  <h1 className="bg-accent md:p-2 text-white font-bold">Notice Board</h1>
+                  {notices.length > 0 ? (
                     <div className="border-2 border-accent h-full">
                       <div className="flex flex-col text-left max-h-40 md:max-h-80 overflow-y-auto divide-y-2">
                         {notices.slice(0, 8).map(notice => (
@@ -126,32 +135,45 @@ const NoticeSection = () => {
                         View more
                       </button>
                     </div>
-                  </div>
-                  <div className="flex flex-col justify-between h-full">
-                    <h1 className="bg-accent w-full md:p-2 font-bold text-white">Downloads</h1>
+                  ) : (
+                    <NoNotices />
+                  )}
+                </div>
+                <div className="flex flex-col justify-between h-full">
+                  <h1 className="bg-accent w-full md:p-2 font-bold text-white">Downloads</h1>
+                  {downloads && downloads.length > 0 ? (
                     <div className="w-full h-full border-2 border-accent text-blue-800 divide-y-2 ">
-                      <Link
+                      {downloads.map(download => {
+                        return (
+                          <Link
+                            className="md:text-sm font-medium flex p-2 md:p-3"
+                            to={download.link}
+                            target="_blank"
+                            view
+                          >
+                            {download.title}
+                          </Link>
+                        );
+                      })}
+                      {/* <Link
                         className="md:text-sm font-medium flex p-2 md:p-3"
-                        to={samplePDF}
+                        to={downloads}
                         target="_blank"
-                        download
-                      >
+                        view>
                         Sample CV
                       </Link>
                       <Link
                         className="md:text-sm font-medium flex p-2 md:p-3"
-                        to={samplePDF}
-                        target="_blank"
-                        download
-                      >
+                        to={downloads}
+                        target="_blank">
                         Sample CV1
-                      </Link>
+                      </Link> */}
                     </div>
-                  </div>
+                  ) : (
+                    <NoDownloads />
+                  )}
                 </div>
-              ) : (
-                <NoNotices />
-              )}
+              </div>
             </Tab.Panel>
           </Tab.Panels>
         </Tab.Group>
