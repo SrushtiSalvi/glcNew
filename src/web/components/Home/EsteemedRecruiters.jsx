@@ -55,8 +55,7 @@ const EsteemedRecruiters = () => {
           1440: {
             slidesPerView: 4,
           },
-        }}
-      >
+        }}>
         {recruiters.map((recruiter, index) => (
           <SwiperSlide key={index} className="py-4 ">
             <div className="flex flex-col items-center justify-center bg-white drop-shadow-lg shadow-lg p-3">
