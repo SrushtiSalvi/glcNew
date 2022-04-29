@@ -44,24 +44,21 @@ const Recruiters = () => {
             className={`bg-cyan-500  hover:text-white font-normal text-lg font-serif py-2 px-12  rounded-3xl ${
               form === 1 ? 'hidden' : 'block'
             }`}
-            onClick={() => setForm(1)}
-          >
+            onClick={() => setForm(1)}>
             PREVIOUS
           </button>
           <button
             className={`bg-cyan-500  hover:text-white font-normal text-lg font-serif py-2 px-12 rounded-3xl ${
               form === 2 ? 'hidden' : 'block'
             }`}
-            onClick={() => setForm(2)}
-          >
+            onClick={() => setForm(2)}>
             NEXT
           </button>
           <button
             className={`bg-cyan-500  hover:text-white font-normal text-lg font-serif py-2 px-12 rounded-3xl uppercase ${
               form === 2 ? 'block' : 'hidden'
             }`}
-            onClick={() => setForm(2)}
-          >
+            onClick={() => setForm(2)}>
             submit
           </button>
         </div>
