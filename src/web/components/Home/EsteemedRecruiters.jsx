@@ -37,8 +37,8 @@ const EsteemedRecruiters = () => {
       <Swiper
         className="py-4"
         modules={[Keyboard, A11y, Autoplay, Pagination]}
-        autoplay
-        speed={50}
+        autoplay={{ delay: 0, disableOnInteraction: false, pauseOnMouseEnter: true }}
+        speed={2000}
         keyboard
         a11y
         loop
