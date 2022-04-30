@@ -23,13 +23,13 @@ const RecruiterList = () => {
     return 0;
   };
   return (
-    <div class="flex flex-col lg:flex-row justify-between ">
+    <div class="lg:grid lg:grid-cols-3 justify-between">
       {recruiters.filter(recruiter => recruiter.recruiter_category === 'Law Firms') &&
       recruiters.filter(recruiter => recruiter.recruiter_category === 'Law Firms').length ? (
         <div className="text-center">
           <h1
             data-aos="fade-right"
-            className="text-xl  md:text-2xl bg-primary-dark rounded-full text-white  m-5"
+            className="text-xl  md:text-2xl bg-primary-dark rounded-full text-white w-3/4 mx-auto m-5"
           >
             Law Firms
           </h1>
@@ -50,7 +50,7 @@ const RecruiterList = () => {
           <div className="text-center">
             <h1
               data-aos="fade-right"
-              className="text-xl md:text-2xl  m-5 bg-primary-dark rounded-full text-white"
+              className="text-xl md:text-2xl w-3/4 mx-auto m-5 bg-primary-dark rounded-full text-white"
             >
               Corporate
             </h1>
@@ -69,7 +69,7 @@ const RecruiterList = () => {
           <div className="text-center">
             <h1
               data-aos="fade-right"
-              className=" block text-xl md:text-2xl bg-primary-dark rounded-full text-white m-5"
+              className=" block text-xl md:text-2xl w-3/4 mx-auto bg-primary-dark rounded-full text-white m-5"
             >
               Counsel
             </h1>
@@ -94,7 +94,7 @@ const RecruiterList = () => {
           <div className="text-center">
             <h1
               data-aos="fade-right"
-              className=" block text-xl md:text-2xl bg-primary-dark rounded-full text-white m-5 px-2"
+              className=" block text-xl md:text-2xl bg-primary-dark w-3/4 mx-auto lg:w-full rounded-full text-white m-5 px-2"
             >
               Goverment Authorities, Tribunals & NGOs
             </h1>
@@ -119,7 +119,7 @@ const RecruiterList = () => {
           <div className="text-center">
             <h1
               data-aos="fade-right"
-              className=" block text-xl md:text-2xl bg-primary-dark rounded-full text-white m-5"
+              className=" block text-xl md:text-2xl bg-primary-dark w-3/4 mx-auto lg:w-full rounded-full text-white m-5"
             >
               Legal Process Outsourcing (LPOs)
             </h1>
