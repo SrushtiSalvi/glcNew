@@ -1,8 +1,8 @@
-import { useState } from 'react';
 import { RecruiterList, RecruitersForm1 } from '../components/Recruiters';
 
 import RecruitersForm2 from '../components/Recruiters/RecruitersForm2';
 import RecruitmentProcess from '../assets/img/Recruitment Process.png';
+import { useState } from 'react';
 
 const Recruiters = () => {
   const [form, setForm] = useState(1);
@@ -14,7 +14,7 @@ const Recruiters = () => {
           <h1>OUR RECRUITMENT PROCESS</h1>
         </div>
         <div className="flex-1 lg:flex lg:justify-end hidden">
-          <button className="bg-primary hover:shadow-lg hover:shadow-gray-300 transition-shadow duration-200 z-10 text-gray-200 hover:text-accent rounded-3xl flex-wrap text-base md:text-lg font-bold lg:mr-4 p-3">
+          <button className="bg-primary hover:shadow-lg hover:shadow-gray-300 transition-all duration-200 z-10 text-gray-200 hover:text-accent rounded-3xl flex-wrap text-base md:text-lg font-bold lg:mr-4 p-3">
             View Recruitment <br /> Brochure
           </button>
         </div>
