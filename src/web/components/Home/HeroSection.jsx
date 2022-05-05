@@ -1,6 +1,6 @@
 import Navbar from './Navbar';
 import React from 'react';
-import heroSectionBg from '../../assets/img/herobg.png';
+import heroSectionBg from '../../assets/img/herobg.webp';
 import logo from '../../assets/img/GLC_logo.png';
 
 const HeroSection2 = () => {

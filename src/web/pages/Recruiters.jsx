@@ -1,7 +1,7 @@
 import { RecruiterList, RecruitersForm1 } from '../components/Recruiters';
 
 import RecruitersForm2 from '../components/Recruiters/RecruitersForm2';
-import RecruitmentProcess from '../assets/img/Recruitment Process.png';
+import RecruitmentProcess from '../assets/img/Recruitment Process.webp';
 import { useState } from 'react';
 
 const Recruiters = () => {
