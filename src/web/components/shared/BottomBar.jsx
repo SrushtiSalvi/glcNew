@@ -11,31 +11,31 @@ const BottomBar = () => {
   return (
     <ul
       id="bottomBar"
-      className="bg-primary-dark text-gray-100 px-2 fixed bottom-0 w-full divide-x flex lg:hidden items-center justify-around h-14 border-t z-[1000]"
+      className="bg-primary-dark text-gray-100 px-2 fixed bottom-0 w-full divide-x flex lg:hidden items-center justify-around h-16 z-[1000]"
     >
       <li
-        className="bottombar-list-item group flex flex-col place-items-center "
+        className="bottombar-list-item group flex flex-col place-items-center hover:bg-primary-light"
         onClick={() => navigate('/')}
       >
         <AiOutlineHome className="bottombar-icon" />
         <p className="text-sm">Home</p>
       </li>
       <li
-        className="bottombar-list-item group flex flex-col place-items-center"
+        className="bottombar-list-item group flex flex-col place-items-center hover:bg-primary-light"
         onClick={() => navigate('/about-us')}
       >
         <FcAbout className="bottombar-icon" />
         <p className="text-sm">About Us</p>
       </li>
       <li
-        className="bottombar-list-item group flex flex-col place-items-center"
+        className="bottombar-list-item group flex flex-col place-items-center hover:bg-primary-light"
         onClick={() => navigate('/recruiters')}
       >
         <BiNotepad className="bottombar-icon" />
         <p className="text-sm">Recruiters</p>
       </li>
       <li
-        className="bottombar-list-item group flex flex-col place-items-center"
+        className="bottombar-list-item group flex flex-col place-items-center hover:bg-primary-light"
         onClick={() => navigate('/students-corner')}
       >
         <BsFilePersonFill className="bottombar-icon" />

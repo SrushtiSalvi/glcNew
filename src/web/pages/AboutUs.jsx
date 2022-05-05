@@ -6,7 +6,6 @@ import image_incharge from '../assets/img/Prof. S. Gaddapwar.jpeg';
 import image_principal from '../assets/img/Dr. Asmita Vaidya.jpeg';
 import logo from '../assets/img/GLC_logo.png';
 import logo_pc from '../assets/img/pc_logo.png';
-import member from '../assets/img/core_team/Anuj Lakhotiya.jpg';
 
 const AboutUs = () => {
   const [people, setPeople] = useState([
@@ -169,35 +168,35 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="md:grid-cols-3 grid-rows-3 font-poppins bg-primary-dark md:my-5 p-2 sm:p-8">
-        <h1 className="text-center font-bold text-xl sm:text-2xl md:text-3xl text-white m-4 sm:my-10 underline decoration-2 underline-offset-[20px] pb-5">
-          Founder's Message
-        </h1>
-        <div className=" flex-col flex justify-center items-center ">
+      <div className="grid grid-cols-3 lg:flex-row font-poppins bg-primary-dark my-5 p-2 sm:p-8">
+        <div className="z flex flex-col mx-auto justify-center">
           <img
-            className="w-36 h-36 sm:w-48 sm:h-48 lg:w-72 lg:h-72 rounded-full"
+            className="w-36 h-36 sm:w-48 sm:h-48 lg:w-80 lg:h-80 rounded-full"
             src={image_founder}
             alt="logo"
           />
-          <h1 className=" my-5 font-dancing-script text-white text-xl md:text-3xl font-aref-ruqaa">
+          <h1 className=" my-5  font-dancing-script text-white text-xl md:text-3xl lg:text-4xl">
             Prof. H. D. Pithawalla
           </h1>
         </div>
 
-        <div className="sm:flex-1 md:mr-25 p-2 col-span-2">
-          <div className=" text-justify text-white sm:p-5  font-light  text-xs sm:text-base font-poppins-regular md:mx-10 space-y-5">
-            <p>
+        <div className=" w-full col-span-2 p-8">
+          <h1 className="text-center font-bold text-xl sm:text-2xl md:text-3xl text-white m-4 sm:m-6 underline decoration-2 underline-offset-[20px] pb-5">
+            Founder's Message
+          </h1>
+          <div className="   text-justify text-white sm:p-5  font-light  text-xs sm:text-lg md:text-xl">
+            <p className="mb-6">
               The Placement Committee of Government Law College, Mumbai, is one of the most
               important committees of the college, shouldering the responsibility of providing a
               stepping stone to success to budding lawyers graduating from the college.
             </p>
-            <p>
+            <p className="mb-6">
               The committee aims at exhausting all possible opportunities of recruitment with law
               firms, counsels, LPOs, and corporate houses. It acts as a link between the recruiters
               and the students, thereby fulfilling the needs of both, and enabling the students to
               get placements on campus.
             </p>
-            <p>
+            <p className="mb-6">
               The members of the Placement Committee strive hard to ensure that maximum students
               from the college secure internships and jobs, thus providing them with an opportunity
               to head start their legal careers. For the last many years, the Placement Committee
@@ -205,7 +204,7 @@ const AboutUs = () => {
               organizing two placement weeks in a year. This widening scope of the committee
               benefits both the students and the potential employers.
             </p>
-            <p>
+            <p className="mb-6">
               The increasing rate of students getting recruited by the day is a source of
               inspiration for all students who work zealously for the committee, and encourages them
               to undertake the tasks of the committee with even greater zeal and enthusiasm.
@@ -255,7 +254,7 @@ const AboutUs = () => {
                 key={i}
                 name={person.name}
                 post={person.post}
-                url={`src/web/assets/img/core_team/${person.name.replaceAll(' ', ' ')}.jpg`}
+                url={`assets/core_team/${person.name.replaceAll(' ', ' ')}.jpg`}
               />
             );
           })}
@@ -271,7 +270,7 @@ const AboutUs = () => {
                 name={person.name}
                 post={person.post}
                 // url={`src/web/assets/img/core_team/${person.name.replaceAll(' ', ' ')}.jpg`}
-                url={`src/web/assets/img/core_team/${person.name.replaceAll(' ', ' ')}.jpg`}
+                url={`assets/core_team/${person.name.replaceAll(' ', ' ')}.jpg`}
                 // url={member}
               />
               //

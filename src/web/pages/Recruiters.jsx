@@ -13,10 +13,14 @@ const Recruiters = () => {
         <div className="flex-1 flex-col font-extrabold text-xl md:text-2xl lg:text-3xl text-center font-poppins justify-center">
           <h1>OUR RECRUITMENT PROCESS</h1>
         </div>
-        <div className="flex-1 lg:flex lg:justify-end hidden">
-          <button className="bg-primary hover:shadow-lg hover:shadow-gray-300 transition-all duration-200 z-10 text-gray-200 hover:text-accent rounded-3xl flex-wrap text-base md:text-lg font-bold lg:mr-4 p-3">
+        <div className="flex-1 lg:flex lg:justify-end hidden text-center">
+          <a
+            href="https://drive.google.com/file/d/1ckrQHDUAFXgL_Ojr2Bqv_IIBN5I8dK4k/view?usp=sharing"
+            target="_blank"
+            className="bg-primary hover:shadow-lg hover:shadow-gray-300 transition-all duration-200 z-10 text-gray-200 hover:text-accent rounded-3xl flex-wrap text-base md:text-lg font-bold lg:mr-4 p-3"
+          >
             View Recruitment <br /> Brochure
-          </button>
+          </a>
         </div>
       </div>
 
@@ -44,21 +48,24 @@ const Recruiters = () => {
             className={`bg-cyan-500  hover:text-white font-normal text-lg font-serif py-2 px-12  rounded-3xl ${
               form === 1 ? 'hidden' : 'block'
             }`}
-            onClick={() => setForm(1)}>
+            onClick={() => setForm(1)}
+          >
             PREVIOUS
           </button>
           <button
             className={`bg-cyan-500  hover:text-white font-normal text-lg font-serif py-2 px-12 rounded-3xl ${
               form === 2 ? 'hidden' : 'block'
             }`}
-            onClick={() => setForm(2)}>
+            onClick={() => setForm(2)}
+          >
             NEXT
           </button>
           <button
             className={`bg-cyan-500  hover:text-white font-normal text-lg font-serif py-2 px-12 rounded-3xl uppercase ${
               form === 2 ? 'block' : 'hidden'
             }`}
-            onClick={() => setForm(2)}>
+            onClick={() => setForm(2)}
+          >
             submit
           </button>
         </div>

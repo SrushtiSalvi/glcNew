@@ -24,7 +24,7 @@ const Options = () => {
       <hr className="hidden md:block w-0.5 h-32 bg-black" />
       <OptionBarItem
         className="group"
-        title={`Vacancy updates`}
+        title={`Subscribe for Vacancy updates`}
         onClick={() => navigate('/all-posts')}
       >
         <MdOutlineNoteAlt className="w-6 h-6 md:h-12 md:w-12 cursor-pointer group-hover:scale-110 transition-all duration-150" />
